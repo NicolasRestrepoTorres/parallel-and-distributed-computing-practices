@@ -5,30 +5,35 @@ using namespace std;
 
 void Blur(Mat img) {
 	printf("Blublublubluur!\n");
-	int red, green, blue;
+	int red, green, blue, i, j;
 
-	double convMatrix[3][3] = {{0.9,0.9,0.9},
-							   {0.9,0.9,0.9},
-							   {0.9,0.9,0.9}};
+	Mat mred(img.rows, img.rows, CV_64FC1,Scalar(255,255,255));
 
-	Mat mred(img.rows-2, img.rows-2, CV_64FC1,Scalar(0,0,0));
+	for(int y=0;y<img.rows-1;y++){
+		for(int x=0;x<img.cols-1;x++){
+			red = 0;
+			green = 0;
+			blue = 0;
 
-	for(int y=0;y<img.rows;y++){
-		
-		for(int x=0;x<img.cols;x++){
-		    // get pixel
-		    Vec3b color = img.at<Vec3b>(Point(x,y));
-			red = (int) color(0);
-			green = (int) color(1);
-			blue = (int) color(2);
-		    // ... do something to the color ....
-			//imageRed[x][y] = red;
-			//imageGreen[x][y] = green;
-			//imageBlue[x][y] = blue;
-		    // set pixel
-		    img.at<Vec3b>(Point(x,y)) = Vec3b(0,0,0);
-		}
+			for(i=0; i<3; i++){
+				for(j=0; j<3; j++){
+					Vec3b color = img.at<Vec3b>(Point(x+i,y+j)); 
+					red += (int) color(0);
+					green += (int) color(1);
+					blue += (int) color(2);
+				}
+			}
+			red=red/9;
+			green=green/9;
+			blue=blue/9;
+			//printf("r:%d, g:%d, b:%d\n", red, green, blue);
+			mred.at<Vec3b>(Point(x,y)) = Vec3b(red,green,blue);
+		}	
 	}
+	namedWindow("Display Image", WINDOW_AUTOSIZE );
+    imshow("Display Image", mred);
+    imwrite( "blurred.jpg", mred);
+    waitKey(0);
 }
 
 int main(int argc, char** argv ){
@@ -54,8 +59,6 @@ int main(int argc, char** argv ){
     
 	printf("r:%d, c:%d\n", img.rows, img.cols);	
 
-	namedWindow("Display Image", WINDOW_AUTOSIZE );
-    imshow("Display Image", img);
-    waitKey(0);
+	
 	return 0;
 }

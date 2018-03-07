@@ -78,6 +78,8 @@ int *getAverageAround(Mat img, int a, int b, int m){
 			accumulatorG++;
 			sumB += (int) color(2);
 			accumulatorB++;
+		}else{
+			cout << "Tmps: " << tmp1 << " " << tmp2 << endl;
 		}
 		x++;
 	}
@@ -114,13 +116,14 @@ int sumR = 0, sumG = 0, sumB = 0;
 		for(int x=0;x<img.cols;x++)
 		{
 			if(y==67 || y==268 || y==402) continue;
+
 				// get pixel
 				Vec3b color = img.at<Vec3b>(Point(x,y));
 				cout << "x: " << x << " y: " << y << endl;
 				//cout << "Previous " << (int) color(0) << " Av " << getAverageAround(img, x, y, 1204) << endl;
 
 
-				int *results = getAverageAround(img, x, y, 50);
+				int *results = getAverageAround(img, x, y, 1);
 
 				//cout << "Previous " << color <<  endl;
 				//cout << "Previous " << img.at<Vec3b>(Point(x,y)) <<  endl;
@@ -131,6 +134,7 @@ int sumR = 0, sumG = 0, sumB = 0;
 				color(1) = results[1];
 				color(2) = results[2];
 				img.at<Vec3b>(Point(x,y)) = color;
+				if (x>100) break;
 				//if (x>10) break;
 				//img.at<Vec3b>(Point(x,y))(0) = getAverageAround(img, x, y, 1204);
 				//cout << "After " << img.at<Vec3b>(Point(x,y)) <<  endl;
@@ -150,7 +154,7 @@ int sumR = 0, sumG = 0, sumB = 0;
 				//img.at<Vec3b>(Point(x,y)) = color;
 		}
 
-	//break;
+	break;
 	}
 
 	return img;
@@ -287,12 +291,12 @@ cout << "check";
 
 
 	imwrite( "blurred.jpg", changed );
-
- namedWindow( "Original", CV_WINDOW_AUTOSIZE );
- namedWindow( "Blurred", CV_WINDOW_AUTOSIZE );
-
- imshow( "Original", img );
- imshow( "Blurred", changed );
+ //
+ // namedWindow( "Original", CV_WINDOW_AUTOSIZE );
+ // namedWindow( "Blurred", CV_WINDOW_AUTOSIZE );
+ //
+ // imshow( "Original", img );
+ // imshow( "Blurred", changed );
 cout << endl;
  waitKey(0);
 	return 0;

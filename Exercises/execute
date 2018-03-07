@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+clear
+rm mmopenmp
+gcc -fopenmp matrix_multiplication_open_mp.c -o mmopenmp -fno-stack-protector
+./mmopenmp 800 8

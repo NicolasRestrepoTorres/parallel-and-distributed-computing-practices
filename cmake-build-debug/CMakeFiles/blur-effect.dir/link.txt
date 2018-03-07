@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/blur-effect.dir/Practice1/blur-effect.c.o  -o blur-effect 

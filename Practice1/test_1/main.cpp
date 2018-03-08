@@ -10,7 +10,7 @@ using namespace std;
 
 
 bool checkBounds(int a, int b, int bx, int by){
-
+	//cout << "hehehe!" << " "<< a << " "<<b << " "<<bx << " "<<by << endl;
 	if(a<0 || a>bx) return false;
 	if(b<0 || b>by) return false;
 	return true;
@@ -24,8 +24,8 @@ int *getAverageAround(Mat img, int a, int b, int m){
 	int accumulatorR = 0, accumulatorG = 0, accumulatorB = 0;
 	for(int i = 0; i < m*9; i++){
 		a = copya; b = copyb;
-		a *= x; b*= x;
-		//cout << a << " " << b << " " << x << " " << endl << endl;
+		//a *= x; b*= x;
+		//cout << a << " " << b << " " << x << " " << endl ;
 		switch(i%9){
 
 			case 0:
@@ -66,10 +66,10 @@ int *getAverageAround(Mat img, int a, int b, int m){
 
 				break;
 		}
-		//cout << "Tmps: " << tmp1 << " " << tmp2 << " " << checkBounds(tmp1,tmp2, img.cols, img.rows)<< endl;
+		//cout <<  "a / b: " << a << " " << b << " case: " << i << " " << i%9 << " Tmps: " << tmp1 << " " << tmp2 << " Bounds damaged? " << checkBounds(tmp1,tmp2, img.cols, img.rows)<< endl;
 
 		if(checkBounds(tmp1,tmp2, img.cols, img.rows)){
-
+			//cout << Point(tmp1,tmp2) << endl;
 			Vec3b color = img.at<Vec3b>(Point(tmp1,tmp2));
 			//cout << "Wichitig " << color << endl;
 			sumR += (int) color(0);
@@ -79,7 +79,8 @@ int *getAverageAround(Mat img, int a, int b, int m){
 			sumB += (int) color(2);
 			accumulatorB++;
 		}else{
-			cout << "Tmps: " << tmp1 << " " << tmp2 << endl;
+			//cout << "Failed: " << tmp1 << " " << tmp2 << endl;
+			//cout << ".";
 		}
 		x++;
 	}
@@ -90,11 +91,11 @@ int *getAverageAround(Mat img, int a, int b, int m){
 	sumG = (double) (sumG) / (double) accumulatorG;
 	sumB = (double) (sumB) / (double) accumulatorB;
 	if(accumulatorR != 0) arr[0] = (int) sumR;
-	else arr[0] = img.at<Vec3b>(Point(copya,copyb))(0);
+	else arr[0] = img.at<Vec3b>(copya,copyb)(0);
 	if(accumulatorG != 0) arr[1] = (int) sumG;
-	else arr[1] = img.at<Vec3b>(Point(copya,copyb))(1);
+	else arr[1] = img.at<Vec3b>(copya,copyb)(1);
 	if(accumulatorB != 0) arr[2] = (int) sumB;
-	else arr[2] = img.at<Vec3b>(Point(copya,copyb))(2);
+	else arr[2] = img.at<Vec3b>(copya,copyb)(2);
 
 	//cout << "Arrr: " << arr[0] << " " << arr[1] << " " << arr[2] << endl;
 	return arr;
@@ -108,33 +109,45 @@ int *getAverageAround(Mat img, int a, int b, int m){
 
 Mat BoxBlur(Mat img){
 	cout << "check";
+		//cout << "rows/cols " << img.rows << " " << img.cols << endl;;
 	Mat blurred = img;
 
 int sumR = 0, sumG = 0, sumB = 0;
-	for(int y=0;y<img.rows;y++)
+	for(int x=0;x<img.cols - 3;x++)
 	{
-		for(int x=0;x<img.cols;x++)
+		for(int y=0;y<img.rows - 3;y++)
 		{
-			if(y==67 || y==268 || y==402) continue;
-
+			//if (x == 1330) continue;
+			//if(y==67 || y==268 || y==402 || y == 1330 || y==428) continue;
+			//if (x == 428) continue;
 				// get pixel
-				Vec3b color = img.at<Vec3b>(Point(x,y));
-				cout << "x: " << x << " y: " << y << endl;
+
+						//	cout << "x: " << x <<"<" <<img.cols  << " y: " << y<<"<" <<img.rows  << endl;
+							 Vec3b color = img.at<Vec3b>(Point(x,y));
+							int *results = getAverageAround(img, x, y, 1);
+							color(0) = results[0];
+							color(1) = results[1];
+							color(2) = results[2];
+							 img.at<Vec3b>(Point(x,y)) = color;
+
+
+
+
+
+
 				//cout << "Previous " << (int) color(0) << " Av " << getAverageAround(img, x, y, 1204) << endl;
 
 
-				int *results = getAverageAround(img, x, y, 1);
+
 
 				//cout << "Previous " << color <<  endl;
 				//cout << "Previous " << img.at<Vec3b>(Point(x,y)) <<  endl;
 				//cout << "results: " << results[0] << " " << results[1] << " "<< results[2] << endl;
 
 				//img.setcolor(cv::Vec3b(getAverageAround(img, x, y, 1204),(int) color(1),(int) color(2)));
-				color(0) = results[0];
-				color(1) = results[1];
-				color(2) = results[2];
-				img.at<Vec3b>(Point(x,y)) = color;
-				if (x>100) break;
+
+
+				//if (x>100) break;
 				//if (x>10) break;
 				//img.at<Vec3b>(Point(x,y))(0) = getAverageAround(img, x, y, 1204);
 				//cout << "After " << img.at<Vec3b>(Point(x,y)) <<  endl;
@@ -154,7 +167,8 @@ int sumR = 0, sumG = 0, sumB = 0;
 				//img.at<Vec3b>(Point(x,y)) = color;
 		}
 
-	break;
+	//break;
+	//if (x == 428) continue;
 	}
 
 	return img;
@@ -193,7 +207,7 @@ int *multiplyRGB(Vec3b component1, Vec3b component2){
 	cout << "arr[0] " << arr[0] << " " << R1 << " " << R2;
 	arr[1] = G1*G2;
 	arr[2] = B1*B2;
-	cout << G2 << "Lizzy <3" << endl;
+
 	return arr;
 
 }
@@ -214,15 +228,12 @@ int *addRGB(Vec3b component1, Vec3b component2){
 	cout << "arr[0] " << arr[0] << " " << R1 << " " << R2;
 	arr[1] = G1+G2;
 	arr[2] = B1+B2;
-	cout << G2 << "Lizzy <3" << endl;
+
 	return arr;
 
 }
 
 int main(int argc, char** argv ){
-
-
-
 
 
 	if ( argc != 2 ){
@@ -280,7 +291,14 @@ int main(int argc, char** argv ){
 
 cout << "check";
 	Mat changed;
+
+
+
+	for(int lizzy = 0; lizzy < 15; lizzy++)
 	changed = BoxBlur(img);
+
+
+cout << "rows/cols " << img.rows << " " << img.cols;
 	//for(int h= 0; h<= 45; h++)	changed = BoxBlur(changed);
 	//int arrx[4];
 
@@ -290,14 +308,22 @@ cout << "check";
 	//return 0
 
 
-	imwrite( "blurred.jpg", changed );
+
+	Mat original_original;
+	string name_image = argv[1];
+
+  //std::replace( name_image.begin(), name_image.end(), 'jpg', ' '); // replace all 'x' to 'y'
+	//  std::replace( name_image.begin(), name_image.end(), '.', ' '); // replace all 'x' to 'y'
+	name_image += "_blurred.jpg";
+    original_original = imread( argv[1], 1 );
+	imwrite( name_image, changed );
  //
- // namedWindow( "Original", CV_WINDOW_AUTOSIZE );
- // namedWindow( "Blurred", CV_WINDOW_AUTOSIZE );
- //
- // imshow( "Original", img );
- // imshow( "Blurred", changed );
+//namedWindow( "Original", CV_WINDOW_AUTOSIZE );
+ //namedWindow( "Blurred", CV_WINDOW_AUTOSIZE );
+
+ //imshow( "Original", original_original );
+ //imshow( "Blurred", changed );
 cout << endl;
- waitKey(0);
+ //waitKey(0);
 	return 0;
 }

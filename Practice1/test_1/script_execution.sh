@@ -1,5 +1,6 @@
-#!bin/bash
+#!/bin/bash
 
+rm main
 cmake .
 make
-./main a.jpg
+./main landscape.jpg

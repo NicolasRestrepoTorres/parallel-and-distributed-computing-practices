@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm main
+cmake .
+make
+./main 1.jpeg
+./main 2.jpeg
+./main 3.jpeg
+./main 4.jpg
+./main lena.jpg

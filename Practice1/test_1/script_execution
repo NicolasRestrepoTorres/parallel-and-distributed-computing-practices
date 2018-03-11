@@ -3,4 +3,4 @@
 rm main
 cmake .
 make
-./main a.jpg
+./main landscape.jpeg

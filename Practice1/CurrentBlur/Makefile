@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1"
+CMAKE_SOURCE_DIR = "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1"
+CMAKE_BINARY_DIR = "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1/CMakeFiles" "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur/CMakeFiles" "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

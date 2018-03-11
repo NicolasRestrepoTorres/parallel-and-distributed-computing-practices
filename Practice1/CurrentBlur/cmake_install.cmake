@@ -1,4 +1,4 @@
-# Install script for directory: /home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1
+# Install script for directory: /home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

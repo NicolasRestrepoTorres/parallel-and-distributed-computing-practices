@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1/main.cpp
+/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur/main.cpp
 stdio.h
 -
 opencv2/opencv.hpp
@@ -14,5 +14,7 @@ opencv2/opencv.hpp
 bits/stdc++.h
 -
 iostream
+-
+time.h
 -
 

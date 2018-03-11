@@ -1,3 +1,3 @@
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1/CMakeFiles/rebuild_cache.dir
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1/CMakeFiles/edit_cache.dir
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/test_1/CMakeFiles/main.dir
+/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur/CMakeFiles/rebuild_cache.dir
+/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur/CMakeFiles/edit_cache.dir
+/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/CurrentBlur/CMakeFiles/main.dir

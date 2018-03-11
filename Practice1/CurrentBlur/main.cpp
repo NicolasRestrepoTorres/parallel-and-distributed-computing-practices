@@ -2,7 +2,9 @@
 #include <opencv2/opencv.hpp>
 #include <bits/stdc++.h>
 #include <iostream>
-#define ITERATIONS 3
+#include <time.h>
+
+#define ITERATIONS 1
 using namespace cv;
 using namespace std;
 
@@ -18,6 +20,29 @@ int *getAverageAround(Mat img, int a, int b, int m){
 	int tmp1 = 0, tmp2 = 0, sumR = 0,sumG = 0,sumB = 0, copya = a, copyb = b, x = 1;
 	static int arr[3];
 	int accumulatorR = 0, accumulatorG = 0, accumulatorB = 0;
+	tmp1 = a-1;
+	tmp2 = b-1;
+	for(int i = 0; i < m*3; i++){
+		a = copya; b = copyb;
+		for(int j = 0; j < m*3; j++){
+			if(checkBounds(tmp1+j,tmp2+i, img.cols, img.rows)){
+				//cout << Point(tmp1,tmp2) << endl;
+				Vec3b color = img.at<Vec3b>(Point(tmp1+j,tmp2+i));
+				//cout << "Wichitig " << color << endl;
+				sumR += (int) color(0);
+				accumulatorR++;
+				sumG += (int) color(1);
+				accumulatorG++;
+				sumB += (int) color(2);
+				accumulatorB++;
+			}else{
+				//cout << "Failed: " << tmp1 << " " << tmp2 << endl;
+				//cout << ".";
+			}
+			x++;
+		}
+	}
+/*
 	for(int i = 0; i < m*9; i++){
 		a = copya; b = copyb;
 		//a *= x; b*= x;
@@ -80,6 +105,7 @@ int *getAverageAround(Mat img, int a, int b, int m){
 		}
 		x++;
 	}
+*/
 	//cout << "SumR " << sumR << " Acc " << accumulatorR << endl;
 	//cout << "SumG " << sumG << " Acc " << accumulatorG << endl;
 	//cout << "SumB " << sumB << " Acc " << accumulatorB << endl;
@@ -98,17 +124,9 @@ int *getAverageAround(Mat img, int a, int b, int m){
 }
 
 
-
-
-
-
-
 Mat BoxBlur(Mat img){
-	cout << "check";
-		//cout << "rows/cols " << img.rows << " " << img.cols << endl;;
 	Mat blurred = img;
-
-int sumR = 0, sumG = 0, sumB = 0;
+	int sumR = 0, sumG = 0, sumB = 0;
 	for(int x=0;x<img.cols - 3;x++)
 	{
 		for(int y=0;y<img.rows - 3;y++)
@@ -125,10 +143,8 @@ int sumR = 0, sumG = 0, sumB = 0;
 			//cout << "After " << color <<  endl;
 		}
 	}
-
 	return img;
 }
-
 
 
 
@@ -187,6 +203,8 @@ int *addRGB(Vec3b component1, Vec3b component2){
 }
 
 int main(int argc, char** argv ){
+		clock_t start, end;
+    start=clock();
 
 		if ( argc != 2 ){
         printf("usage: DisplayImage.out <Image_Path>\n");
@@ -202,13 +220,35 @@ int main(int argc, char** argv ){
     int red, green, blue;
 		Mat changed;
 		for(int i = 0; i < ITERATIONS; i++)
-			changed = BoxBlur(img);
-		cout << "rows/cols " << img.rows << " " << img.cols;
+		changed = BoxBlur(img);
+		string name_image =  argv[1];
+		vector<std::string> allArgs(argv, argv + argc);
+		int length = allArgs[1].size();
+		cout << "length " << length << endl;
 		Mat original_original;
-		string name_image = argv[1];
-  	name_image += "_blurred.jpg";
+		//char [50] name_new_image;
+		//int len = (int) strlen(name_image);
+		//int length = sizeof(name_image)/sizeof(char);
+
+
+
+// 		std::cout << "Splitting: " << str << '\n';
+std::size_t found = allArgs[1].find_last_of('.');
+//std::cout << " path: " << allArgs[1].substr(0,found) << '\n';
+//std::cout << " file: " << allArgs[1].substr(found+1) << '\n';
+
+
+  	string name_new_image = allArgs[1].substr(0,found);
+		name_new_image += "_blurred.";
+		name_new_image += allArgs[1].substr(found+1);
     original_original = imread( argv[1], 1 );
-		imwrite( name_image, changed );
-		cout << endl;
+		cout << name_new_image << endl;
+		imwrite( name_new_image, changed );
+
+		end=clock();
+		double time_taken = (double) (end-start)/CLOCKS_PER_SEC;
+
+		cout << "The image " << allArgs[1].substr(0,found) << " with " << img.rows << " rows and " << img.cols << " cols was blurred with " << ITERATIONS << " iterations in " << time_taken << " seconds."<< endl;
+
 		return 0;
 }

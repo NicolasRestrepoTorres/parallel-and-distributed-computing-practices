@@ -8,7 +8,7 @@
 #include <pthread.h>
 
 #define ITERATIONS 1
-int THREADS;
+int THREADS = 1;
 using namespace cv;
 using namespace std;
 struct timeval  tv1, tv2;
@@ -70,7 +70,7 @@ int *getAverageAround(Mat img, int a, int b, int m){
 }
 
 
-int *BoxBlur(void*ap){
+void *BoxBlur(void*ap){
 	Mat blurred, img;
 	struct thread_info tinfo;
 	int id, sumR = 0, sumG = 0, sumB = 0;
@@ -94,7 +94,7 @@ int *BoxBlur(void*ap){
 			//cout << "After " << color <<  endl;
 		}
 	}
-	return 0;
+	return NULL;
 }
 
 int main(int argc, char** argv ){
@@ -121,7 +121,7 @@ int main(int argc, char** argv ){
 		for(int i = 0; i < ITERATIONS; i++){
 			for(i=0; i<THREADS; i++){
 				tinfo.id = i;
-				r = pthread_create(&hilo[i], NULL, (void*)BoxBlur, (void*)&tinfo);
+				r = pthread_create(&hilo[i], NULL, BoxBlur, (void*)&tinfo);
 				if(r != 0){
 					perror("Error en pthread_create");
 					exit(-1);
@@ -167,7 +167,7 @@ std::size_t found = allArgs[1].find_last_of('.');
 
 		cout << "The image " << allArgs[1].substr(0,found) << " with " << img.rows << " rows and " << img.cols << " cols was blurred with " << ITERATIONS << " iterations in " << time_taken << " seconds."<< endl;
 
-		printf ("Total time = %f seconds\n",
+		printf("Total time = %f seconds\n",
 	         (double) (tv2.tv_usec - tv1.tv_usec) / 1000000 +
 	         (double) (tv2.tv_sec - tv1.tv_sec));
 		return 0;

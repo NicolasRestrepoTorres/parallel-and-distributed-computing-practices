@@ -8,7 +8,7 @@
 #include <pthread.h>
 
 #define ITERATIONS 1
-int THREADS = 1;
+int THREADS;
 using namespace cv;
 using namespace std;
 struct timeval  tv1, tv2;
@@ -102,7 +102,7 @@ int main(int argc, char** argv ){
     start=clock();
 		gettimeofday(&tv1, NULL);
 
-		if ( argc != 2 ){
+		if ( argc != 3 ){
         printf("usage: DisplayImage.out <Image_Path>\n");
         return -1;
     	}
@@ -112,6 +112,7 @@ int main(int argc, char** argv ){
         printf("No image data \n");
         return -1;
     }
+		THREADS = atoi(argv[2]);
 
     int red, green, blue, length, i, r;
 		pthread_t hilo[THREADS];

@@ -130,7 +130,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=main_posix
+CMAKE_PROJECT_NAME:STATIC=blur-effect
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -185,10 +185,10 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 OpenCV_DIR:PATH=/usr/local/share/OpenCV
 
 //Value Computed by CMake
-main_posix_BINARY_DIR:STATIC=/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur
+blur-effect_BINARY_DIR:STATIC=/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur
 
 //Value Computed by CMake
-main_posix_SOURCE_DIR:STATIC=/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur
+blur-effect_SOURCE_DIR:STATIC=/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur
 
 
 ########################

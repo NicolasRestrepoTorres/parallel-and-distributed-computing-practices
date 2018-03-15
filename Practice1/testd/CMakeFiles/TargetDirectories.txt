@@ -1,3 +1,0 @@
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/testd/CMakeFiles/edit_cache.dir
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/testd/CMakeFiles/rebuild_cache.dir
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/testd/CMakeFiles/DisplayImage.dir

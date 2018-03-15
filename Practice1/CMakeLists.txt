@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 2.8)
-project( bmp_to_matrix )
-find_package( OpenCV REQUIRED )
-include_directories( ${OpenCV_INCLUDE_DIRS} )
-add_executable( bmp_to_matrix bmp_to_matrix.cpp )
-target_link_libraries( bmp_to_matrix ${OpenCV_LIBS} )

@@ -1,4 +1,4 @@
-# Install script for directory: /home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/CurrentBlur
+# Install script for directory: /home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/sequential_blur
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/CurrentBlur/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/sequential_blur/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

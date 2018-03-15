@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main_posix
+# Target rules for targets named blur-effect
 
 # Build rule for target.
-main_posix: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main_posix
-.PHONY : main_posix
+blur-effect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blur-effect
+.PHONY : blur-effect
 
 # fast build rule for target.
-main_posix/fast:
-	$(MAKE) -f CMakeFiles/main_posix.dir/build.make CMakeFiles/main_posix.dir/build
-.PHONY : main_posix/fast
+blur-effect/fast:
+	$(MAKE) -f CMakeFiles/blur-effect.dir/build.make CMakeFiles/blur-effect.dir/build
+.PHONY : blur-effect/fast
 
-main_posix.o: main_posix.cpp.o
+blur-effect.o: blur-effect.cpp.o
 
-.PHONY : main_posix.o
+.PHONY : blur-effect.o
 
 # target to build an object file
-main_posix.cpp.o:
-	$(MAKE) -f CMakeFiles/main_posix.dir/build.make CMakeFiles/main_posix.dir/main_posix.cpp.o
-.PHONY : main_posix.cpp.o
+blur-effect.cpp.o:
+	$(MAKE) -f CMakeFiles/blur-effect.dir/build.make CMakeFiles/blur-effect.dir/blur-effect.cpp.o
+.PHONY : blur-effect.cpp.o
 
-main_posix.i: main_posix.cpp.i
+blur-effect.i: blur-effect.cpp.i
 
-.PHONY : main_posix.i
+.PHONY : blur-effect.i
 
 # target to preprocess a source file
-main_posix.cpp.i:
-	$(MAKE) -f CMakeFiles/main_posix.dir/build.make CMakeFiles/main_posix.dir/main_posix.cpp.i
-.PHONY : main_posix.cpp.i
+blur-effect.cpp.i:
+	$(MAKE) -f CMakeFiles/blur-effect.dir/build.make CMakeFiles/blur-effect.dir/blur-effect.cpp.i
+.PHONY : blur-effect.cpp.i
 
-main_posix.s: main_posix.cpp.s
+blur-effect.s: blur-effect.cpp.s
 
-.PHONY : main_posix.s
+.PHONY : blur-effect.s
 
 # target to generate assembly for a file
-main_posix.cpp.s:
-	$(MAKE) -f CMakeFiles/main_posix.dir/build.make CMakeFiles/main_posix.dir/main_posix.cpp.s
-.PHONY : main_posix.cpp.s
+blur-effect.cpp.s:
+	$(MAKE) -f CMakeFiles/blur-effect.dir/build.make CMakeFiles/blur-effect.dir/blur-effect.cpp.s
+.PHONY : blur-effect.cpp.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... main_posix"
+	@echo "... blur-effect"
 	@echo "... edit_cache"
-	@echo "... main_posix.o"
-	@echo "... main_posix.i"
-	@echo "... main_posix.s"
+	@echo "... blur-effect.o"
+	@echo "... blur-effect.i"
+	@echo "... blur-effect.s"
 .PHONY : help
 
 

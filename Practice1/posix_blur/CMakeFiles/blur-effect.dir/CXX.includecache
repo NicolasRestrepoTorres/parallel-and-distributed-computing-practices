@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/sequential_blur/blur-effect.cpp
+/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur/blur-effect.cpp
 stdio.h
 -
 opencv2/opencv.hpp
@@ -16,6 +16,14 @@ bits/stdc++.h
 iostream
 -
 time.h
+-
+sys/time.h
+-
+stdlib.h
+-
+pthread.h
+-
+semaphore.h
 -
 
 /usr/local/include/opencv/cxcore.h

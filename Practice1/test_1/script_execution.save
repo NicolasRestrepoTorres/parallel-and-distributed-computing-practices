@@ -1,7 +1,0 @@
-#!/bin/bash
-
-rm main
-cmake .
-make
-./main landscape.jpeg
-./main 1.jpeg

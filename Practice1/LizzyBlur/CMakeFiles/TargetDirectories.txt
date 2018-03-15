@@ -1,3 +1,0 @@
-/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/LizzyBlur/CMakeFiles/rebuild_cache.dir
-/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/LizzyBlur/CMakeFiles/main.dir
-/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/LizzyBlur/CMakeFiles/edit_cache.dir

@@ -1,3 +1,3 @@
 /home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur/CMakeFiles/rebuild_cache.dir
-/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur/CMakeFiles/main_posix.dir
+/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur/CMakeFiles/blur-effect.dir
 /home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/posix_blur/CMakeFiles/edit_cache.dir

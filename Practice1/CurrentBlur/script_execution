@@ -1,6 +1,0 @@
-#!/bin/bash
-
-rm main
-cmake .
-make
-./main lena.jpg

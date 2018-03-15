@@ -1,3 +1,0 @@
-The image 720p.jpg with 720 rows and 1280 cols was blurred with 1 iterations in 0.592461 seconds.
-The image 1080p.jpg with 1080 rows and 1920 cols was blurred with 1 iterations in 1.35391 seconds.
-The image 4K.jpeg with 2160 rows and 3840 cols was blurred with 1 iterations in 5.54382 seconds.

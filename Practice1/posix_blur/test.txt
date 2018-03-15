@@ -1,0 +1,4 @@
+The image 720p.jpg with 720 rows and 1280 cols was blurred with 1 iterations in 0.675347 seconds.
+Total time = 0.261868 seconds
+The image 720p.jpg with 720 rows and 1280 cols was blurred with 1 iterations in 0.345363 seconds.
+Total time = 0.345467 seconds

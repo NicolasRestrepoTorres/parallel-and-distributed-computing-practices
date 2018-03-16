@@ -75,7 +75,7 @@ Mat BoxBlur(Mat img, int k){
 
 int main(int argc, char** argv ){
 		clock_t start, end;
-		Mat img;
+		Mat img, blurred;
 		int k;
 
     start=clock();
@@ -88,10 +88,10 @@ int main(int argc, char** argv ){
 
 		k = atoi(argv[3]);
 		for(int i = 0; i < ITERATIONS; i++){
-			BoxBlur(img, k);
+			blurred = BoxBlur(img, k);
 		}
 
-		imwrite( argv[2], img );
+		imwrite( argv[2], blurred );
 
 		end=clock();
 		double time_taken = (double) (end-start)/CLOCKS_PER_SEC;

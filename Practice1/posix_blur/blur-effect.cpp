@@ -9,17 +9,12 @@
 #include <semaphore.h>
 
 #define ITERATIONS 1
-int THREADS;
 using namespace cv;
 using namespace std;
 struct timeval  tv1, tv2;
-sem_t semvar;
-
-struct thread_info{
-	Mat img, blurred;
-	int id;
-	int k;
-};
+int THREADS, k;
+sem_t semvar, semvar2;
+Mat img, blurred;
 
 bool checkBounds(int a, int b, int bx, int by){
 	if(a<0 || a>bx) return false;
@@ -27,7 +22,7 @@ bool checkBounds(int a, int b, int bx, int by){
 	return true;
 }
 
-int *getAverageAround(Mat img, int a, int b, int k){
+int *getAverageAround(int a, int b, int k){
 
 	int accumulator, cornerX, cornerY, sumRGB[] = {0,0,0};
 	static int arr[3];
@@ -42,7 +37,7 @@ int *getAverageAround(Mat img, int a, int b, int k){
 
 	for(int i = 0; i < k; i++){
 		for(int j = 0; j < k; j++){
-			if(checkBounds(cornerX+j,cornerY+i, img.rows, img.cols)){
+			if(checkBounds(cornerX+j,cornerY+i, img.cols, img.rows)){
 				Vec3b color = img.at<Vec3b>(Point(cornerX+j,cornerY+i));
 				sumRGB[0] += (int) color(0);
 				sumRGB[1] += (int) color(1);
@@ -66,36 +61,35 @@ int *getAverageAround(Mat img, int a, int b, int k){
 
 
 void *BoxBlur(void*ap){
-	Mat blurred, img;
-	int k, id;
-	struct thread_info tinfo;
-	tinfo = *(thread_info*)ap;
+	int id;
+	id = *(int*)ap;
 
-	for(int x=tinfo.id;x<img.cols;x+=THREADS)
-	{
-		for(int y=0;y<img.rows;y++)
-		{
-			Vec3b color = img.at<Vec3b>(Point(x,y));
-			int *results = getAverageAround(tinfo.img, x, y, tinfo.k);
+	for(int x=id;x<img.cols;x+=THREADS){
+		printf("hilo: %d, col: %d\n", id, x);
+		for(int y=0;y<img.rows;y++){
+			Vec3b color;// = img.at<Vec3b>(Point(x,y));
+			//sem_wait(&semvar2);
+			int *results = getAverageAround(x, y, k);
+			//sem_post(&semvar2);
 			color(0) = results[0];
 			color(1) = results[1];
 			color(2) = results[2];
 			//sem_wait(&semvar);
 				//printf("in\n");
-				tinfo.blurred.at<Vec3b>(Point(x,y)) = color;
+				blurred.at<Vec3b>(Point(x,y)) = color;
 			//sem_post(&semvar);
 
 		}
 	}
-	return NULL;
+	//imshow( "lalal", tinfo.blurred);
+	return 0;
 }
 
 int main(int argc, char** argv ){
 		clock_t start, end;
-		Mat img, blurred;
 		sem_init(&semvar, 0, 1);
-		int k, r, i;
-		struct thread_info tinfo;
+		sem_init(&semvar2, 0, 1);
+		int r, t;
 
 		start=clock();
 		gettimeofday(&tv1, NULL);
@@ -109,30 +103,31 @@ int main(int argc, char** argv ){
 		k = atoi(argv[3]);
 		THREADS = atoi(argv[4]);
 		pthread_t hilo[THREADS];
-
-		tinfo.img = img;
-		tinfo.blurred = blurred = img.clone();
-		tinfo.k = k;
-
-
-		for(i = 0; i < ITERATIONS; i++){
-			for(i=0; i<THREADS; i++){
-				tinfo.id = i;
-				r = pthread_create(&hilo[i], NULL, BoxBlur, (void*)&tinfo);
+		printf("THREADS: %d\n", THREADS);
+		blurred = Mat(img.rows, img.cols, CV_8UC3, Scalar(255,255,255));
+		//for(i = 0; i < ITERATIONS; i++){
+			for(t=0; t<THREADS; t++){
+				printf("t: %d\n", t);
+				r = pthread_create(&hilo[t], NULL, &BoxBlur, (void*)&t);
 				if(r != 0){
 					perror("Error en pthread_create");
 					exit(-1);
 				}
 			}
-		}
 
-		for(i=0; i<THREADS; i++){
-			r = pthread_join(hilo[i], NULL);
-			if(r != 0){
-				perror("Error en pthread_join");
-				exit(-1);
+			for(t=0; t<THREADS; t++){
+				r = pthread_join(hilo[t], NULL);
+				if(r != 0){
+					perror("Error en pthread_join");
+					exit(-1);
+				}
 			}
-		}
+
+			//img = blurred.clone();
+
+		//}
+
+
 
 		imwrite( argv[2], blurred );
 

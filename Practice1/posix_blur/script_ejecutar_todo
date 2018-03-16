@@ -4,6 +4,6 @@ rm *blurred*
 rm blur-effect
 cmake .
 make
-./blur-effect 720p.jpg 720p_blurred.jpg 3 3
-./blur-effect 1080p.jpg 1080p_blurred.jpg 3 3 
-./blur-effect 4K.jpeg 4K_blurred.jpg 3 3 
+./blur-effect 720p.jpg 720p_blurred.jpg 15 3
+./blur-effect 1080p.jpg 1080p_blurred.jpg 15 3 
+./blur-effect 4K.jpeg 4K_blurred.jpg 15 3 

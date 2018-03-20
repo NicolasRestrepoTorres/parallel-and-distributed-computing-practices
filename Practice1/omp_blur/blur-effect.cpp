@@ -18,8 +18,8 @@ sem_t semvar, semvar2;
 Mat img, blurred;
 
 bool checkBounds(int a, int b, int bx, int by){
-	if(a<0 || a>bx) return false;
-	if(b<0 || b>by) return false;
+	if(a<0 || a>=bx) return false;
+	if(b<0 || b>=by) return false;
 	return true;
 }
 
@@ -28,7 +28,10 @@ void BoxBlur(){
 
 	#pragma omp parallel
 	{
+		int debug = 0;
 	int id = omp_get_thread_num();
+
+
 	int accumulator, cornerX, cornerY, sumRGB[] = {0,0,0};
 
 		//printf("Hilo: %d\n", id);
@@ -36,6 +39,8 @@ void BoxBlur(){
 			//printf("hilo: %d, col: %d\n", id, x);
 			for(int y=0;y<img.rows;y++){
 				//sem_wait(&semvar2);
+				//cout << y << endl;
+
 				sumRGB[0]=0;
 				sumRGB[1]=0;
 				sumRGB[2]=0;
@@ -80,6 +85,7 @@ void BoxBlur(){
 
 			}
 		}
+
 	}
 }
 
@@ -99,7 +105,7 @@ int main(int argc, char** argv ){
 		k = atoi(argv[3]);
 		THREADS = atoi(argv[4]);
 		omp_set_num_threads(THREADS);
-		pthread_t hilo[THREADS];
+
 		blurred = Mat(img.rows, img.cols, CV_8UC3, Scalar(255,255,255));
 
 
@@ -108,7 +114,17 @@ int main(int argc, char** argv ){
 		imwrite( argv[2], blurred );
 
 		double end_t = omp_get_wtime();
-		printf("Time: %f\n", end_t - start_t);
+
+
+		//cout << "Image \"" << argv[1] << "\":" << endl;
+		//printf("Rows: %d Cols: %d\n", img.rows, img.cols);
+		//printf("Kernel Size: %d \n", k);
+		//printf("Threads: %d\n", THREADS);
+		//printf("Iterations: %d \n", ITERATIONS);
+		//printf("Time: %f\n", end_t - start_t);
+		printf("%f\n", end_t - start_t);
+		//cout << endl << endl;
+
 
 
 		return 0;

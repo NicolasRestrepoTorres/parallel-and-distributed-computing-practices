@@ -1,3 +1,3 @@
-/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/sequential_blur/CMakeFiles/rebuild_cache.dir
-/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/sequential_blur/CMakeFiles/blur-effect.dir
-/home/lizzyt10h/6to semestre/Paralela y Distribuida/shared/Practice1/sequential_blur/CMakeFiles/edit_cache.dir
+/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/sequential_blur/CMakeFiles/edit_cache.dir
+/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/sequential_blur/CMakeFiles/rebuild_cache.dir
+/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/sequential_blur/CMakeFiles/blur-effect.dir

@@ -17,8 +17,8 @@ sem_t semvar, semvar2;
 Mat img, blurred;
 
 bool checkBounds(int a, int b, int bx, int by){
-	if(a<0 || a>bx) return false;
-	if(b<0 || b>by) return false;
+	if(a<0 || a>=bx) return false;
+	if(b<0 || b>=by) return false;
 	return true;
 }
 
@@ -128,11 +128,23 @@ int main(int argc, char** argv ){
 		double time_taken = (double) (end-start)/CLOCKS_PER_SEC;
 		gettimeofday(&tv2, NULL);
 
-		cout << "The image " << argv[1] << " with " << img.rows << " rows and " << img.cols << " cols was blurred with " << ITERATIONS << " iterations in " << time_taken << " seconds."<< endl;
+		//cout << "The image " << argv[1] << " with " << img.rows << " rows and " << img.cols << " cols was blurred with " << ITERATIONS << " iterations in " << time_taken << " seconds."<< endl;
 
-		printf("Total time = %f seconds\n",
-	         (double) (tv2.tv_usec - tv1.tv_usec) / 1000000 +
-	         (double) (tv2.tv_sec - tv1.tv_sec));
+
+		//cout << "Image \"" << argv[1] << "\":" << endl;
+		//printf("Rows: %d Cols: %d\n", img.rows, img.cols);
+		//printf("Kernel Size: %d \n", k);
+		//printf("Threads: %d\n", THREADS);
+		//printf("Iterations: %d \n", ITERATIONS);
+		// printf("Total time = %f seconds\n",
+	  //        (double) (tv2.tv_usec - tv1.tv_usec) / 1000000 +
+	  //        (double) (tv2.tv_sec - tv1.tv_sec));
+		printf("%f\n",
+		       (double) (tv2.tv_usec - tv1.tv_usec) / 1000000 +
+		       (double) (tv2.tv_sec - tv1.tv_sec));
+
+
+
 
 		sem_destroy(&semvar);
 		return 0;

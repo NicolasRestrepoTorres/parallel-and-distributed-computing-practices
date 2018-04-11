@@ -1,0 +1,7 @@
+Observaciones
+
+Para cada uno de los métodos solicitados para ejecutar el efecto borroso se tienen una las carpetas con sus respectivos ejemplos y script de ejecución, se debe entonces ejecutar ./script_ejecutar_todo para cada una de las carpetas y poder ver los resultados.
+
+Para lograr el efecto borroso, se usó el algoritmo box blur, el cual recibe como parámetros de entrada el nombre de la imagen original, el nombre de la imagen resultante y el tamaño del kernel que se va a usar.
+
+Por dentro, el algoritmo box blur calcula el promedio de cada una de las componentes de color RGB de los pixeles que están alrededor de cada pixel que compone la imagen.

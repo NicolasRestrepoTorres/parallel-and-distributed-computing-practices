@@ -1,0 +1,136 @@
+#!/bin/bash
+
+rm *blurred*
+rm resultados.txt
+rm blur-effect
+rm CMakeCache.txt
+rm -rf CMakeFiles
+rm -rf images_results
+clear
+cmake .
+make
+
+#720p.jpg
+printf "\n\nSequential Box Blur! \n\n"
+printf "\nBlurring 720p.jpg with kernel: 3...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_3.jpg 3 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 4...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_4.jpg 4 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 5...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_5.jpg 5 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 6...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_6.jpg 6 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 8...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_8.jpg 8 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 9...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_9.jpg 9 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 10...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_10.jpg 10 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 11...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_11.jpg 11 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 12...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_12.jpg 12 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 13...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_13.jpg 13 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 14...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_14.jpg 14 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 720p.jpg with kernel: 15...\n"
+time ./blur-effect 720p.jpg 720p_blurred_kernel_15.jpg 15 >> resultados.txt
+
+
+
+
+#1080p.jpg
+printf "Sequential Box Blur! \n\n"
+printf "\nBlurring 1080p.jpg with kernel: 3...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_3.jpg 3 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 4...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_4.jpg 4 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 5...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_5.jpg 5 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 6...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_6.jpg 6 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 8...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_8.jpg 8 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 9...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_9.jpg 9 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 10...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_10.jpg 10 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 11...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_11.jpg 11 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 12...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_12.jpg 12 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 13...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_13.jpg 13 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 14...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_14.jpg 14 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 1080p.jpg with kernel: 15...\n"
+time ./blur-effect 1080p.jpg 1080p_blurred_kernel_15.jpg 15 >> resultados.txt
+
+
+#4K.jpeg
+printf "Sequential Box Blur! \n\n"
+printf "\nBlurring 4K.jpeg with kernel: 3...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_3.jpeg 3 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 4...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_4.jpeg 4 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 5...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_5.jpeg 5 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 6...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_6.jpeg 6 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 8...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_8.jpeg 8 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 9...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_9.jpeg 9 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 10...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_10.jpeg 10 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 11...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_11.jpeg 11 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 12...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_12.jpeg 12 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 13...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_13.jpeg 13 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 14...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_14.jpeg 14 >> resultados.txt
+printf "\nBlurred !\n"
+printf "\nBlurring 4K.jpeg with kernel: 15...\n"
+time ./blur-effect 4K.jpeg 4K_blurred_kernel_15.jpeg 15 >> resultados.txt
+
+
+mkdir images_results
+mv *blurred* images_results/
+
+
+printf "End of all sequential tests \n\n"

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( blur-effect )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( blur-effect blur-effect.cpp )
+target_link_libraries( blur-effect ${OpenCV_LIBS} )

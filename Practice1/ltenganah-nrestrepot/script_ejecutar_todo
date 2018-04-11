@@ -1,9 +1,0 @@
-#!/bin/bash
-
-rm *blurred*
-rm blur-effect
-cmake .
-make
-./blur-effect 720p.jpg 720p_blurred.jpg 4 >> resultados.txt
-./blur-effect 1080p.jpg 1080p_blurred.jpg 4 >> resultados.txt
-./blur-effect 4K.jpeg 4K_blurred.jpg 4 >> resultados.txt

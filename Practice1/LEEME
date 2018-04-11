@@ -1,5 +1,0 @@
-Observaciones
-
-Para lograr el efecto borroso, se usó el algoritmo box blur, el cual recibe como parámetros de entrada el nombre de la imagen original, el nombre de la imagen resultante y el tamaño del kernel que se va a usar.
-
-Por dentro, el algoritmo box blur calcula el promedio de cada una de las componentes de color RGB de los pixeles que están alrededor de cada pixel que compone la imagen.

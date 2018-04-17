@@ -1,3 +1,0 @@
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/posix_blur/CMakeFiles/edit_cache.dir
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/posix_blur/CMakeFiles/rebuild_cache.dir
-/home/nicolas/Semestre VIII/Computación Paralela y Distribuida/Practices/Practice1/posix_blur/CMakeFiles/blur-effect.dir

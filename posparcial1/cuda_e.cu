@@ -1,15 +1,18 @@
 #include <stdio.h>
 
-__global__ void square(const int *d_num_steps, unsigned long long *d_fact, double *d_out){
+__global__ void square( int *d_num_steps, unsigned long long *d_fact, double *d_out){
   int idx = threadIdx.x;
-  for(int k=0; k<d_num_steps; k+=blockDim.x){
+  int num_steps = *d_num_steps;
+  //printf("%d\n", threadIdx.x);
+  for(int k=1; k< num_steps; k+=blockDim.x){
     d_out[idx] += k*0.5/d_fact[k-1];
+    printf("%d\n", idx);
   }
 
 }
 
 int main(int argc, char ** argv){
-  const int h_num_steps = 21;
+  int h_num_steps = 21;
   int THREADS = atoi(argv[1]);
   double e;
 
@@ -22,17 +25,17 @@ int main(int argc, char ** argv){
   double h_out[THREADS];
 
   //declare GPU memory pointers
-  const int *d_num_steps;
+  int *d_num_steps;
   unsigned long long *d_fact;
   double *d_out;
 
   //allocate GPU memory
-  cudaMalloc((void **) &d_num_steps, sizeof(const int));
+  cudaMalloc((void **) &d_num_steps, sizeof(int));
   cudaMalloc((void **) &d_fact, h_num_steps*sizeof(unsigned long long));
   cudaMalloc((void **) &d_out, THREADS*sizeof(double));
 
   // transfer the array to the GPU
-  cudaMemcpy(d_num_steps, h_num_steps, sizeof(const int), cudaMemcpyHostToDevice);
+  cudaMemcpy(d_num_steps, &h_num_steps, sizeof(int), cudaMemcpyHostToDevice);
   cudaMemcpy(d_fact, h_fact, h_num_steps*sizeof(unsigned long long), cudaMemcpyHostToDevice);
 
   // launch the kernel

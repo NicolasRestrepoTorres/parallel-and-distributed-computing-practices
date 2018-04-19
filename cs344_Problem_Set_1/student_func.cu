@@ -32,10 +32,13 @@
 //so that the entire image is processed.
 
 #include "utils.h"
+#include <stdio.h>
+
+
 
 __global__
 void rgba_to_greyscale(const uchar4* const rgbaImage,
-                       unsigned char* const greyImage,
+                       uchar4 * const greyImage,
                        int numRows, int numCols)
 {
   //TODO (solved)
@@ -49,15 +52,116 @@ void rgba_to_greyscale(const uchar4* const rgbaImage,
 
   //First create a mapping from the 2D block and grid locations
   //to an absolute 2D location in the image, then use that to
-  //calculate a 1D offset
+  //calculate a 1D index
   // could also use blockDim.x instead of numCols
-  int offset = numCols * blockIdx.x + threadIdx.x;
-  uchar4 rgbpx = rgbaImage[offset];
-  greyImage[offset] = (unsigned char)(0.299f * rgbpx.x + 0.587f * rgbpx.y + 0.114f * rgbpx.z);
+  //Columna, fila
+  int index = numCols * blockIdx.x + threadIdx.x;
+  uchar4 rgbpx = rgbaImage[index];
+  // greyImage[index] = (unsigned char)(0.299f * rgbpx.x + 0.587f *
+  //   rgbpx.y + 0.114f * rgbpx.z);
+    int size_kernel = 3;
+    int start_x = blockIdx.x; int start_y = threadIdx.x;
+    int accumulator = 0; double red = 0.0; double green = 0.0; double blue = 0.0;
+    int current_pixel; bool valid;
+    uchar4 rgbpx_current_pixel;
+    for(int i = start_x; i < (start_x + size_kernel); i++){
+      for(int j = start_y; j < (start_y + size_kernel); j++){
+        //
+        if (i < 0 || i >= numCols) valid = false;
+        else if (j < 0 || j >= numRows) valid = false;
+        else valid = true;
+        if (valid){
+          current_pixel = numCols * i + j;
+          rgbpx_current_pixel = rgbaImage[current_pixel];
+          red += rgbpx_current_pixel.x;
+          green += rgbpx_current_pixel.y;
+          blue += rgbpx_current_pixel.z;
+
+          // greyImage[index] = (unsigned char)(0.299f * rgbpx_current_pixel.x +
+          //   0.587f * rgbpx_current_pixel.y + 0.114f * rgbpx_current_pixel.z);
+            accumulator += 1;
+        }
+      }
+    }
+
+
+    if(index % 10000 == 0){
+    printf("Original %d: %d \n", index, rgbpx.x);
+    rgbpx.x = red;
+    rgbpx.y = green;
+    rgbpx.z = blue;
+    printf("Changed %d: %d \n",index, rgbpx.x);
+
+    greyImage[index] =   rgbpx;
+    }
+
+    //
+    //
+  	// int debug = 0;
+  	// int id = index;
+    //
+    //
+  	// int accumulator, cornerX, cornerY, sumRGB[] = {0,0,0};
+    //
+  	// 	//printf("Hilo: %d\n", id);
+  	// 	for(int x=id;x<img.cols;x+=THREADS){
+  	// 		//printf("hilo: %d, col: %d\n", id, x);
+  	// 		for(int y=0;y<img.rows;y++){
+  	// 			//sem_wait(&semvar2);
+  	// 			//cout << y << endl;
+    //
+  	// 			sumRGB[0]=0;
+  	// 			sumRGB[1]=0;
+  	// 			sumRGB[2]=0;
+  	// 			accumulator=0;
+  	// 			if(k%2==0){
+  	// 				cornerX = x-(k-1)/2;
+  	// 				cornerY = y-(k-1)/2;
+  	// 			}else{
+  	// 				cornerX = x-(k-2)/2;
+  	// 				cornerY = y-(k-2)/2;
+  	// 			}
+    //
+  	// 			for(int i = 0; i < k; i++){
+  	// 				for(int j = 0; j < k; j++){
+  	// 					if(checkBounds(cornerX+j,cornerY+i, img.cols, img.rows)){
+  	// 						Vec3b color = img.at<Vec3b>(Point(cornerX+j,cornerY+i));
+  	// 						sumRGB[0] += (int) color(0);
+  	// 						sumRGB[1] += (int) color(1);
+  	// 						sumRGB[2] += (int) color(2);
+  	// 						accumulator++;
+  	// 					}
+  	// 				}
+  	// 			}
+    //
+  	// 			if(accumulator == 0){
+  	// 				sumRGB[0] = img.at<Vec3b>(Point(x,y))(0);
+  	// 				sumRGB[1] = img.at<Vec3b>(Point(x,y))(1);
+  	// 				sumRGB[2] = img.at<Vec3b>(Point(x,y))(2);
+  	// 			}else{
+  	// 				sumRGB[0] = sumRGB[0] / accumulator;
+  	// 				sumRGB[1] = sumRGB[1] / accumulator;
+  	// 				sumRGB[2] = sumRGB[2] / accumulator;
+  	// 			}
+  	// 			//sem_post(&semvar2);
+  	// 			Vec3b color;
+  	// 			color(0) = sumRGB[0];
+  	// 			color(1) = sumRGB[1];
+  	// 			color(2) = sumRGB[2];
+  	// 			#pragma omp critical
+  	// 				blurred.at<Vec3b>(Point(x,y)) = color;
+    //
+    //
+  	// 		}
+  	// 	}
+
 }
 
+
+
+
 void your_rgba_to_greyscale(const uchar4 * const h_rgbaImage, uchar4 * const d_rgbaImage,
-                            unsigned char* const d_greyImage, size_t numRows, size_t numCols)
+                            uchar4 * const d_greyImage, size_t numRows, size_t numCols)
 {
   //You must fill in the correct sizes for the blockSize and gridSize
   //currently only one block with one thread is being launched
@@ -68,4 +172,3 @@ void your_rgba_to_greyscale(const uchar4 * const h_rgbaImage, uchar4 * const d_r
   cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
 
 }
-

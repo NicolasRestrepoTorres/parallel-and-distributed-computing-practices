@@ -10,7 +10,7 @@ cv::Mat imageRGBA;
 cv::Mat imageGrey;
 
 uchar4        *d_rgbaImage__;
-unsigned char *d_greyImage__;
+uchar4 *d_greyImage__;
 
 size_t numRows() { return imageRGBA.rows; }
 size_t numCols() { return imageRGBA.cols; }
@@ -20,8 +20,8 @@ size_t numCols() { return imageRGBA.cols; }
 //returns a pointer to an RGBA version of the input image
 //and a pointer to the single channel grey-scale output
 //on both the host and device
-void preProcess(uchar4 **inputImage, unsigned char **greyImage,
-                uchar4 **d_rgbaImage, unsigned char **d_greyImage,
+void preProcess(uchar4 **inputImage, uchar4 **greyImage,
+                uchar4 **d_rgbaImage, uchar4 **d_greyImage,
                 const std::string &filename) {
   //make sure the context initializes ok
   checkCudaErrors(cudaFree(0));
@@ -45,14 +45,14 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
     exit(1);
   }
 
-  *inputImage = (uchar4 *)imageRGBA.ptr<unsigned char>(0);
-  *greyImage  = imageGrey.ptr<unsigned char>(0);
+  *inputImage = imageRGBA.ptr<uchar4>(0);
+  *greyImage  = imageGrey.ptr<uchar4>(0);
 
   const size_t numPixels = numRows() * numCols();
   //allocate memory on the device for both input and output
   checkCudaErrors(cudaMalloc(d_rgbaImage, sizeof(uchar4) * numPixels));
-  checkCudaErrors(cudaMalloc(d_greyImage, sizeof(unsigned char) * numPixels));
-  checkCudaErrors(cudaMemset(*d_greyImage, 0, numPixels * sizeof(unsigned char))); //make sure no memory is left laying around
+  checkCudaErrors(cudaMalloc(d_greyImage, sizeof(uchar4) * numPixels));
+  checkCudaErrors(cudaMemset(*d_greyImage, 0, numPixels * sizeof(uchar4))); //make sure no memory is left laying around
 
   //copy input array to the GPU
   checkCudaErrors(cudaMemcpy(*d_rgbaImage, *inputImage, sizeof(uchar4) * numPixels, cudaMemcpyHostToDevice));
@@ -61,7 +61,7 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
   d_greyImage__ = *d_greyImage;
 }
 
-void postProcess(const std::string& output_file, unsigned char* data_ptr) {
+void postProcess(const std::string& output_file, uchar4* data_ptr) {
   cv::Mat output(numRows(), numCols(), CV_8UC1, (void*)data_ptr);
 
   //output the image

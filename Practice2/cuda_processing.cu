@@ -33,7 +33,7 @@ void box_blur(const unsigned char* const inputChannel,
          return;
 
     float color = 0.0f;
-
+    //filterWidth = 18;
     for(int f_y = 0; f_y < filterWidth; f_y++) {
         for(int f_x = 0; f_x < filterWidth; f_x++) {
 

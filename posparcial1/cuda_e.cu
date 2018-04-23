@@ -3,10 +3,8 @@
 __global__ void square( int *d_num_steps, unsigned long long *d_fact, double *d_out){
   int idx = threadIdx.x;
   int num_steps = *d_num_steps;
-  //printf("%d\n", threadIdx.x);
-  for(int k=1; k< num_steps; k+=blockDim.x){
-    d_out[idx] += k*0.5/d_fact[k-1];
-    printf("%d\n", idx);
+  for(int k=idx+1; k< num_steps; k+=blockDim.x){
+    d_out[idx] += (double) k*0.5/ (double) d_fact[k-1];
   }
 
 }
@@ -49,7 +47,7 @@ int main(int argc, char ** argv){
     e+=h_out[i];
   }
 
-  printf("e: %f", e);
+  printf("e: %f\n", e);
 
   // free GPU memory allocation
   cudaFree(d_num_steps);

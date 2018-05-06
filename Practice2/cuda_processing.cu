@@ -20,7 +20,7 @@ void check(T err, const char* const func, const char* const file, const int line
 
 #include <stdio.h>
 __global__
-void box_blur(const unsigned char* const inputChannel,
+void gaussian_blur(const unsigned char* const inputChannel,
                    unsigned char* const outputChannel,
                    int numRows, int numCols,
                    const float* const filter, const int filterWidth)
@@ -111,7 +111,7 @@ void allocateMemoryAndCopyToGPU(const size_t numRowsImage, const size_t numColsI
 
 }
 
-void box_blur(const uchar4 * const h_inputImageRGBA, uchar4 * const d_inputImageRGBA,
+void gaussian_blur(const uchar4 * const h_inputImageRGBA, uchar4 * const d_inputImageRGBA,
                         uchar4* const d_outputImageRGBA, const size_t numRows, const size_t numCols,
                         unsigned char *d_redBlurred,
                         unsigned char *d_greenBlurred,
@@ -130,7 +130,7 @@ void box_blur(const uchar4 * const h_inputImageRGBA, uchar4 * const d_inputImage
                                             d_blue);
   cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
 
-  box_blur<<<gridSize, blockSize>>>(
+  gaussian_blur<<<gridSize, blockSize>>>(
       d_red,
       d_redBlurred,
       numRows,
@@ -139,7 +139,7 @@ void box_blur(const uchar4 * const h_inputImageRGBA, uchar4 * const d_inputImage
       filterWidth);
   cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
 
-  box_blur<<<gridSize, blockSize>>>(
+  gaussian_blur<<<gridSize, blockSize>>>(
       d_blue,
       d_blueBlurred,
       numRows,
@@ -148,7 +148,7 @@ void box_blur(const uchar4 * const h_inputImageRGBA, uchar4 * const d_inputImage
       filterWidth);
   cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
 
-  box_blur<<<gridSize, blockSize>>>(
+  gaussian_blur<<<gridSize, blockSize>>>(
       d_green,
       d_greenBlurred,
       numRows,

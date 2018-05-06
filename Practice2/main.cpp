@@ -1,10 +1,47 @@
 #include <iostream>
-#include "timer.h"
+
 #include <string>
 #include <stdio.h>
 #include "blur-effect.cpp"
+#include <cuda_runtime.h>
 
-void box_blur(const uchar4 * const h_inputImageRGBA, uchar4 * const d_inputImageRGBA,
+struct GpuTimer
+{
+  cudaEvent_t start;
+  cudaEvent_t stop;
+
+  GpuTimer()
+  {
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+  }
+
+  ~GpuTimer()
+  {
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
+  }
+
+  void Start()
+  {
+    cudaEventRecord(start, 0);
+  }
+
+  void Stop()
+  {
+    cudaEventRecord(stop, 0);
+  }
+
+  float Elapsed()
+  {
+    float elapsed;
+    cudaEventSynchronize(stop);
+    cudaEventElapsedTime(&elapsed, start, stop);
+    return elapsed;
+  }
+};
+
+void gaussian_blur(const uchar4 * const h_inputImageRGBA, uchar4 * const d_inputImageRGBA,
                         uchar4* const d_outputImageRGBA,
                         const size_t numRows, const size_t numCols,
                         unsigned char *d_redBlurred,
@@ -68,7 +105,7 @@ int main(int argc, char **argv) {
   allocateMemoryAndCopyToGPU(numRows(), numCols(), h_filter, filterWidth);
   GpuTimer timer;
   timer.Start();
-  box_blur(h_inputImageRGBA, d_inputImageRGBA, d_outputImageRGBA, numRows(), numCols(),
+  gaussian_blur(h_inputImageRGBA, d_inputImageRGBA, d_outputImageRGBA, numRows(), numCols(),
                      d_redBlurred, d_greenBlurred, d_blueBlurred, filterWidth);
   timer.Stop();
   cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());

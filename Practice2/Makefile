@@ -32,7 +32,7 @@ GCC_OPTS=-O3 -Wall -Wextra -m64
 student: main.o cuda_processing.o  Makefile
 	$(NVCC) -o blur-effect main.o cuda_processing.o  -L $(OPENCV_LIBPATH) $(OPENCV_LIBS) $(NVCC_OPTS)
 
-main.o: main.cpp timer.h blur-effect.cpp
+main.o: main.cpp blur-effect.cpp
 	g++ -c main.cpp $(GCC_OPTS) -I $(OPENCV_INCLUDEPATH) -I $(CUDA_INCLUDEPATH)
 
 cuda_processing.o: cuda_processing.cu

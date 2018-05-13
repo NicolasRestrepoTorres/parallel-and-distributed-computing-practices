@@ -1,0 +1,23 @@
+#!/bin/bash
+
+rm *blurred*
+rm *temporal*
+rm resultados.txt
+rm blur-effect
+rm CMakeCache.txt
+rm -rf CMakeFiles
+rm -rf images_results
+clear
+
+
+cmake .
+make
+
+
+printf "\n\nOpen MP Box Blur! \n\n"
+# 720p image
+printf "\nBlurring 720p.jpg with kernel: 3, threads: 2...\n"
+time mpirun -np 4 ./blur-effect 720p.jpg 720p_blurred_kernel_3_threads_2.jpg 15 2
+#time mpirun -np 4 ./blur-effect 4K.jpeg 4K_blurred.jpg 15 2
+
+printf "End of all open MP tests \n\n"

@@ -6,7 +6,7 @@
 #include <mpi.h>
 #include <math.h>
 #define MSG_LENGTH 10
-main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
     int i, tag=0, tasks, iam;
     double x;
@@ -25,9 +25,9 @@ main (int argc, char *argv[])
      } else {
         MPI_Bcast(message, MSG_LENGTH, MPI_INT, root, MPI_COMM_WORLD);
         MPI_Comm_rank(MPI_COMM_WORLD, &iam);
-        printf("\nnode %d %s ", iam, message);                        
+        printf("\nnode %d %s \n", iam, message);
         MPI_Get_processor_name(processor_name, &namelen);
-        printf("processor %s", processor_name); fflush(stdout);
+        printf("\nprocessor %s\n", processor_name); fflush(stdout);
     }
        MPI_Finalize();
 }

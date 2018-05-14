@@ -14,10 +14,13 @@ cmake .
 make
 
 
-printf "\n\nOpen MP Box Blur! \n\n"
+printf "\n\nOpen MPI Box Blur! \n\n"
 # 720p image
 printf "\nBlurring 720p.jpg with kernel: 3, threads: 2...\n"
-time mpirun -np 4 ./blur-effect 720p.jpg 720p_blurred_kernel_3_threads_2.jpg 15 2
-#time mpirun -np 4 ./blur-effect 4K.jpeg 4K_blurred.jpg 15 2
+time mpirun -np 8 ./blur-effect 720p.jpg 720p_blurred_kernel_3.jpg 15
+#time mpirun -np 8 ./blur-effect 4K.jpeg 4K_blurred.jpg 15
+#time mpirun -np 8 ./blur-effect 1080p.jpg 1080_blurred.jpg 15
 
-printf "End of all open MP tests \n\n"
+#time mpirun -np 8 ./blur-effect b.jpg b_blurred.jpg 100
+
+printf "End of all open MPI tests \n\n"

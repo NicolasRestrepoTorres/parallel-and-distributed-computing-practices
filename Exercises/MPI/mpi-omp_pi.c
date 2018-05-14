@@ -33,9 +33,10 @@ int main(int argc, char *argv[])
 	double PI25DT = 3.141592653589793238462643;
 	double local_pi[MAXTHREADS], global_pi;
 	MPI_Init(&argc, &argv);
+  printf("MPI_COMM_WORLD %d processId: %d\n", MPI_COMM_WORLD, processId);
 	MPI_Comm_size(MPI_COMM_WORLD, &numprocs);
 	MPI_Comm_rank(MPI_COMM_WORLD, &processId);
-  if (processId == 0) printf("\nLaunching with %i processes", numprocs);
+  if (processId == 0) printf("\nLaunching with %i processes\n", numprocs);
   global_pi = 0.0;
 
   #pragma omp parallel num_threads(4)
@@ -49,7 +50,7 @@ int main(int argc, char *argv[])
       for(i = 0; i < threadsTotal; i++)
         global_pi = global_pi + local_pi[i];
     }
-    printf("%i ", globalId); fflush(stdout);
+    printf("\n%i \n", globalId); fflush(stdout);
   }
   MPI_Reduce(local_pi, &global_pi, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 	if (processId == 0) printf("\npi is approximately %.16f, Error is %.16f\n", global_pi, fabs(global_pi - PI25DT));

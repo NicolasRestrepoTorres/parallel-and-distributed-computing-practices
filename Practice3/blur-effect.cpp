@@ -42,18 +42,18 @@ using namespace cv;
 using namespace std;
 struct timeval  tv1, tv2;
 int THREADS, k;
-int pipefd[2];
+// int pipefd[2];
 char testigo;
 
 
 Mat img, blurred, copying, ex1, ex2, result;
-
+int width_slice = -1;
 sem_t semaphore;
 
 //--------------------------------------------------------------------
 //                         P R O T O T Y P E S
 //--------------------------------------------------------------------
-void doManager( Mat, int, int );
+void doManager( Mat, int, int, string );
 void doWorker( Mat );
 
 //--------------------------------------------------------------------
@@ -61,14 +61,14 @@ void doWorker( Mat );
 //--------------------------------------------------------------------
 int main(int argc, char *argv[]) {
 
-  pipe(pipefd);
-  write(pipefd[1], "T", 1);
+  // pipe(pipefd);
+  // write(pipefd[1], "T", 1);
   int myId, noProcs, nameLen;
   char procName[MPI_MAX_PROCESSOR_NAME];
   int n;
 
   if ( argc < 2 ) {
-    printf( "Syntax: mpirun -np noProcs ./blur-effect img.jpg img_blurred.jpg k\n" );
+    printf( "Syntax: mpirun -np noProcs ./blur-effect img.jpg img_blurred.jpg kernel_size\n" );
     return 1;
   }
 
@@ -90,13 +90,17 @@ int main(int argc, char *argv[]) {
 	k = atoi(argv[3]);
   n = img.cols;
 
-	sem_init(&semaphore, 0, 1);
-	int points[img.rows + 1][img.cols + 1];
+
+
   //--- start MPI ---
   MPI_Init( &argc, &argv);
+
   MPI_Comm_rank( MPI_COMM_WORLD, &myId );
+
   MPI_Comm_size( MPI_COMM_WORLD, &noProcs );
+
   MPI_Get_processor_name( procName, &nameLen );
+
 
   //--- display which process we are, and how many there are ---
   printf( "Process %d of %d started on %s. n = %d\n",
@@ -104,46 +108,44 @@ int main(int argc, char *argv[]) {
 
   //--- farm out the work: 1 manager, several workers ---
   if ( myId == MANAGER )
-    doManager( img, n, noProcs );
+    doManager( img, n, noProcs, argv[2] );
   else
     doWorker( img );
 
   //--- close up MPI ---
-
-
-
-
-
-
-
-
 	MPI_Finalize();
-	imwrite( argv[2], blurred );
+	//imwrite( argv[2], blurred );
 
-  for(int x = 0; x < noProcs; x++){
+  //Uncomment this section
+  // for(int x = 0; x < noProcs; x++){
+  //
+  //   std::string out_string;
+  //   std::stringstream ss;
+  //   ss << x;
+  //   out_string = ss.str();
+  //   if(x == 0){
+  //     ex1 = imread( out_string + "_temporal.jpg", 1 );
+  //
+  //   }else if(x == 1){
+  //
+  //     ex2 = imread( out_string + "_temporal.jpg", 1 );
+  //     hconcat(ex1, ex2, result);
+  //   }else{
+  //     ex1.release();
+  //     ex1 = result.clone();
+  //     ex2.release();
+  //     ex2 = imread( out_string + "_temporal.jpg", 1 );
+  //
+  //     hconcat(ex1, ex2, result);
+  //   }
+  //
+  //
+  // }
+  //
+  //
+  //
+  // imwrite(  argv[2], result );
 
-    std::string out_string;
-    std::stringstream ss;
-    ss << x;
-    out_string = ss.str();
-    if(x == 0){
-
-
-    }else if(x == 1){
-      ex1 = imread( x + "_temporal.jpg", 1 );
-      ex2 = imread( x + "_temporal.jpg", 1 );
-      hconcat(ex1, ex2, result);
-    }else{
-    //  ex1 = result;
-      ex2 = imread( x + "_temporal.jpg", 1 );
-    //  hconcat(ex1, ex2, result);
-    }
-
-
-  }
-
-
-  imwrite(  argv[2], result );
   return 0;
 }
 
@@ -218,7 +220,7 @@ Mat BoxBlur(Mat img, int begin, int end){
 
         if (x==end-2 && y== 0) {printf("Wer ist hier? %d - %d\n\n", begin, end);}
 
-				blurred.at<Vec3b>(Point(x,y)) = color;
+
         local_mat.at<Vec3b>(Point(x,y)) = color;
 
  				//sem_post(&semaphore);
@@ -239,7 +241,7 @@ Mat BoxBlur(Mat img, int begin, int end){
 // However the current method is explicit and better highlights the
 // communication pattern between Manager and Workers.
 //--------------------------------------------------------------------
-void doManager( Mat img, int n, int noProcs ) {
+void doManager( Mat img, int n, int noProcs, string image_name) {
 	//Mat sum = Mat(img.rows, img.cols, CV_8UC3, Scalar(255,255,255));
     Mat local_mat = Mat(img.rows, img.cols, CV_8UC3, Scalar(255,255,255));
   double sum0 = 0, sum1;
@@ -252,9 +254,10 @@ void doManager( Mat img, int n, int noProcs ) {
   end = n/noProcs;
   for ( i=1; i<noProcs; i++ ) {
     begin = end;
-    end   = (i+1) * n / noProcs;
 
-    //MPI_Send( &img, 1, MPI_INT, i /*node i*/, 0, MPI_COMM_WORLD );
+    end   = (i+1) * n / noProcs;
+    width_slice = end-begin;
+
     MPI_Send( &begin, 1, MPI_INT, i /*node i*/, 0, MPI_COMM_WORLD );
     MPI_Send( &end, 1, MPI_INT, i /*node i*/, 0, MPI_COMM_WORLD );
     MPI_Send( &n, 1, MPI_INT, i /*node i*/, 0, MPI_COMM_WORLD );
@@ -266,9 +269,9 @@ void doManager( Mat img, int n, int noProcs ) {
   end   = n/noProcs;
 	printf("%d/%d invoked\n", i, noProcs);
   //for ( i = begin; i < end; i++ )
-  read(pipefd[0], &testigo, 1);
+  // read(pipefd[0], &testigo, 1);
     local_mat = BoxBlur(img, begin, end);
-    write(pipefd[1], "T", 1);
+    // write(pipefd[1], "T", 1);
 
     int x = begin+end;
     std::string out_string;
@@ -280,15 +283,69 @@ void doManager( Mat img, int n, int noProcs ) {
     Mat image_roi = local_mat(roi);
     image_roi.copyTo(local_mat);
     imwrite( out_string + "_temporal.jpg", image_roi );
-
+    result.release();
   //--- wait for other half from worker ---
+  end = n/noProcs;
   for ( i=1; i<noProcs; i++ ) {
-    MPI_Recv( &sum1, 1, MPI_DOUBLE, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status );
+    begin = end;
+
+    end   = (i+1) * n / noProcs;
+    width_slice = end-begin;
+    printf("Receiving from process %d. width_slice : %d\n", i, width_slice);
+    Mat blu = Mat(img.rows, width_slice, CV_8UC3);
+    MPI_Recv(blu.data, width_slice*img.rows*3, MPI_BYTE, i, 0, MPI_COMM_WORLD, &status);
+    printf("Complete %d\n", i);
+
+
+
+    std::string out_string;
+    std::stringstream ss;
+    ss << begin+end;
+    out_string = ss.str();
+
+    //imwrite( out_string + "_temporal.jpg", blu );
+
+
+
+
+
+
+    if(i == 1)
+      hconcat(image_roi, blu, result);
+    else
+      hconcat(result, blu, result);
+
+      // std::string out_string;
+      // std::stringstream ss;
+      // ss << x;
+      // out_string = ss.str();
+      // if(x == 0){
+      //   ex1 = imread( out_string + "_temporal.jpg", 1 );
+      //
+      // }else if(x == 1){
+      //
+      //   ex2 = imread( out_string + "_temporal.jpg", 1 );
+      //   hconcat(ex1, ex2, result);
+      // }else{
+      //   ex1.release();
+      //   ex1 = result.clone();
+      //   ex2.release();
+      //   ex2 = imread( out_string + "_temporal.jpg", 1 );
+      //
+      //   hconcat(ex1, ex2, result);
+      // }
+
+
+
+
+    //MPI_Recv( &sum1, 1, MPI_DOUBLE, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status );
 
 
     //sum0 += sum1;
   }
+  printf("Writing final image!\n");
 
+  imwrite(image_name, result );
   //--- output result ---
 //	cout << "Image \"" << argv[1] << "\":" << endl;
 	printf("Rows: %d Cols: %d\n", img.rows, img.cols);
@@ -313,7 +370,7 @@ void doManager( Mat img, int n, int noProcs ) {
 //--------------------------------------------------------------------
 void doWorker( Mat img ) {
   int begin, end, n, i;
-  Mat local_mat = Mat(img.rows, img.cols, CV_8UC3, Scalar(255,255,255));
+  Mat local_mat = Mat(img.rows, img.cols, CV_8UC3);
   //--- get n and bounds for summation from manager ---
   MPI_Status status;
   MPI_Recv( &begin, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status );
@@ -326,10 +383,10 @@ void doWorker( Mat img ) {
   double deltaX = 1.0/n;
 
   //for ( i=begin; i< end; i++ )+
-  read(pipefd[0], &testigo, 1);
+  // read(pipefd[0], &testigo, 1);
 
   local_mat =  BoxBlur(img, begin, end);
-  write(pipefd[1], "T", 1);
+  // write(pipefd[1], "T", 1);
   int x = begin+end;
   std::string out_string;
   std::stringstream ss;
@@ -337,14 +394,17 @@ void doWorker( Mat img ) {
   out_string = ss.str();
 
 
-  Rect roi(begin, 0, end - begin, img.rows);
-  Mat image_roi = local_mat(roi);
-  image_roi.copyTo(local_mat);
-  //imwrite("cropimage.jpg",image_roi);
-  imwrite( out_string + "_temporal.jpg", image_roi );
+
+  Mat image_roi = local_mat(Rect(begin, 0, end - begin, img.rows)).clone();
+//  imwrite( out_string + "_temporal.jpg", image_roi );
 
   //-- send result to manager ---
-  MPI_Send( &sum, 1, MPI_DOUBLE, MANAGER, 0, MPI_COMM_WORLD );
+  MPI_Send(image_roi.data, image_roi.cols*image_roi.rows*3, MPI_BYTE, 0, 0, MPI_COMM_WORLD);
+
+
+
+
+  //MPI_Send( &sum, 1, MPI_DOUBLE, MANAGER, 0, MPI_COMM_WORLD );
 
   // for(int x=begin;x<end;x++){
   //   //printf("hilo: %d, col: %d\n", id, x);

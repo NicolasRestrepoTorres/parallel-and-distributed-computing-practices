@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm *blurred*
+rm *temporal*
+rm resultados.txt
+rm blur-effect
+rm CMakeCache.txt
+rm -rf CMakeFiles
+rm -rf images_results
+

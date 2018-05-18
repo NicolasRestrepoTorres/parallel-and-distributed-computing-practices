@@ -1,12 +1,12 @@
 #!/bin/bash
 
-rm *blurred*
-rm *temporal*
-rm resultados.txt
-rm blur-effect
-rm CMakeCache.txt
-rm -rf CMakeFiles
-rm -rf images_results
+sudo rm *blurred*
+sudo rm *temporal*
+sudo rm resultados.txt
+sudo rm blur-effect
+sudo rm CMakeCache.txt
+sudo rm -rf CMakeFiles
+sudo rm -rf images_results
 clear
 
 
@@ -17,8 +17,9 @@ make
 printf "\n\nOpen MPI Box Blur! \n\n"
 # 720p image
 printf "\nBlurring 720p.jpg with kernel: 3, threads: 2...\n"
-#time mpirun -np 8 ./blur-effect 720p.jpg 720p_blurred_kernel_3.jpg 15
-time mpirun -np 8 ./blur-effect 4K.jpeg 4K_blurred.jpg 40
+time mpirun -np 1 ./blur-effect 720p.jpg 720p_blurred_kernel_3.jpg 15
+time mpirun -np 2 ./blur-effect 720p.jpg 720p_blurred_kernel_3xxx.jpg 15
+#time mpirun -np 1 ./blur-effect 4K.jpeg 4K_blurred.jpg 15
 #time mpirun -np 8 ./blur-effect 1080p.jpg 1080_blurred.jpg 15
 
 #time mpirun -np 8 ./blur-effect b.jpg b_blurred.jpg 100

@@ -282,7 +282,8 @@ void doManager( Mat img, int n, int noProcs, string image_name) {
     Rect roi(begin, 0, end - begin, img.rows);
     Mat image_roi = local_mat(roi);
     image_roi.copyTo(local_mat);
-    imwrite( out_string + "_temporal.jpg", image_roi );
+    if(noProcs == 1)      imwrite(image_name, image_roi);
+    else  imwrite( out_string + "_temporal.jpg", image_roi );
     result.release();
   //--- wait for other half from worker ---
   end = n/noProcs;
@@ -345,7 +346,7 @@ void doManager( Mat img, int n, int noProcs, string image_name) {
   }
   printf("Writing final image!\n");
 
-  imwrite(image_name, result );
+  if(noProcs > 1)  imwrite(image_name, result );
   //--- output result ---
 //	cout << "Image \"" << argv[1] << "\":" << endl;
 	printf("Rows: %d Cols: %d\n", img.rows, img.cols);

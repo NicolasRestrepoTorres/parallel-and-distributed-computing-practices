@@ -1,0 +1,2269 @@
+Process 0 of 2 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 2 started on nicolas-GE60-2QD. n = 1280
+2/2 invoked
+Goes from 640 to 1280 of 1280 columns
+
+Goes from 0 to 640 of 1280 columns
+
+Wer ist hier? 640 - 1280
+
+Wer ist hier? 0 - 640
+
+Receiving from process 1. width_slice : 640
+Sended 1280 from process 640 1280 
+Complete 1
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 3 
+
+
+  Process 0 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 2 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 3 of 4 started on nicolas-GE60-2QD. n = 1280
+4/4 invoked
+Goes from 320 to 640 of 1280 columns
+
+Goes from 0 to 320 of 1280 columns
+
+Goes from 640 to 960 of 1280 columns
+
+Goes from 960 to 1280 of 1280 columns
+
+Wer ist hier? 320 - 640
+
+Wer ist hier? 640 - 960
+
+Wer ist hier? 960 - 1280
+
+Wer ist hier? 0 - 320
+
+Receiving from process 1. width_slice : 320
+Complete 1
+Sended 1280 from process 320 640 
+Receiving from process 2. width_slice : 320
+Sended 1280 from process 640 960 
+Complete 2
+Receiving from process 3. width_slice : 320
+Complete 3
+Sended 1280 from process 960 1280 
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 3 
+
+
+      Process 0 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 4 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 5 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 7 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 2 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 6 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 3 of 8 started on nicolas-GE60-2QD. n = 1280
+8/8 invoked
+Goes from 160 to 320 of 1280 columns
+
+Goes from 640 to 800 of 1280 columns
+
+Goes from 0 to 160 of 1280 columns
+
+Goes from 1120 to 1280 of 1280 columns
+
+Goes from 960 to 1120 of 1280 columns
+
+Goes from 480 to 640 of 1280 columns
+
+Goes from 320 to 480 of 1280 columns
+
+Goes from 800 to 960 of 1280 columns
+
+Wer ist hier? 640 - 800
+
+Wer ist hier? 320 - 480
+
+Wer ist hier? 960 - 1120
+
+Wer ist hier? 160 - 320
+
+Wer ist hier? 1120 - 1280
+
+Wer ist hier? 800 - 960
+
+Wer ist hier? 0 - 160
+
+Receiving from process 1. width_slice : 160
+Sended 1280 from process 160 320 
+Complete 1
+Receiving from process 2. width_slice : 160
+Sended 1280 from process 320 480 
+Complete 2
+Receiving from process 3. width_slice : 160
+Wer ist hier? 480 - 640
+
+Complete 3
+Sended 1280 from process 480 640 
+Receiving from process 4. width_slice : 160
+Sended 1280 from process 640 800 
+Complete 4
+Receiving from process 5. width_slice : 160
+Complete 5
+Sended 1280 from process 800 960 
+Receiving from process 6. width_slice : 160
+Complete 6
+Sended 1280 from process 960 1120 
+Receiving from process 7. width_slice : 160
+Sended 1280 from process 1120 1280 
+Complete 7
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 3 
+
+
+              Process 2 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 5 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 0 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 9 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 12 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 14 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 4 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 7 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 10 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 15 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 3 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 6 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 13 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 11 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 8 of 16 started on nicolas-GE60-2QD. n = 1280
+16/16 invoked
+Goes from 320 to 400 of 1280 columns
+
+Goes from 400 to 480 of 1280 columns
+
+Goes from 960 to 1040 of 1280 columns
+
+Goes from 80 to 160 of 1280 columns
+
+Goes from 720 to 800 of 1280 columns
+
+Goes from 640 to 720 of 1280 columns
+
+Goes from 240 to 320 of 1280 columns
+
+Goes from 0 to 80 of 1280 columns
+
+Goes from 1120 to 1200 of 1280 columns
+
+Goes from 880 to 960 of 1280 columns
+
+Goes from 1200 to 1280 of 1280 columns
+
+Goes from 480 to 560 of 1280 columns
+
+Goes from 1040 to 1120 of 1280 columns
+
+Goes from 800 to 880 of 1280 columns
+
+Goes from 560 to 640 of 1280 columns
+
+Goes from 160 to 240 of 1280 columns
+
+Wer ist hier? 320 - 400
+
+Wer ist hier? 400 - 480
+
+Wer ist hier? 80 - 160
+
+Wer ist hier? 0 - 80
+
+Wer ist hier? 880 - 960
+
+Wer ist hier? 640 - 720
+
+Wer ist hier? 480 - 560
+
+Wer ist hier? 720 - 800
+
+Wer ist hier? 1120 - 1200
+
+Wer ist hier? 1040 - 1120
+
+Wer ist hier? 800 - 880
+
+Receiving from process 1. width_slice : 80
+Complete 1
+Sended 1280 from process 80 160 
+Receiving from process 2. width_slice : 80
+Wer ist hier? 960 - 1040
+
+Wer ist hier? 1200 - 1280
+
+Wer ist hier? 160 - 240
+
+Wer ist hier? 240 - 320
+
+Wer ist hier? 560 - 640
+
+Complete 2
+Receiving from process 3. width_slice : 80
+Sended 1280 from process 160 240 
+Complete 3
+Sended 1280 from process 240 320 
+Receiving from process 4. width_slice : 80
+Complete 4
+Sended 1280 from process 320 400 
+Receiving from process 5. width_slice : 80
+Sended 1280 from process 400 480 
+Complete 5
+Receiving from process 6. width_slice : 80
+Sended 1280 from process 480 560 
+Complete 6
+Receiving from process 7. width_slice : 80
+Complete 7
+Sended 1280 from process 560 640 
+Receiving from process 8. width_slice : 80
+Complete 8
+Receiving from process 9. width_slice : 80
+Sended 1280 from process 640 720 
+Sended 1280 from process 720 800 
+Complete 9
+Receiving from process 10. width_slice : 80
+Sended 1280 from process 800 880 
+Complete 10
+Receiving from process 11. width_slice : 80
+Sended 1280 from process 880 960 
+Complete 11
+Receiving from process 12. width_slice : 80
+Complete 12
+Sended 1280 from process 960 1040 
+Receiving from process 13. width_slice : 80
+Sended 1280 from process 1040 1120 
+Complete 13
+Receiving from process 14. width_slice : 80
+Sended 1280 from process 1120 1200 
+Complete 14
+Receiving from process 15. width_slice : 80
+Complete 15
+Sended 1280 from process 1200 1280 
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 3 
+
+
+                              Process 0 of 2 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 2 started on nicolas-GE60-2QD. n = 1280
+2/2 invoked
+Goes from 640 to 1280 of 1280 columns
+
+Goes from 0 to 640 of 1280 columns
+
+Wer ist hier? 640 - 1280
+
+Wer ist hier? 0 - 640
+
+Receiving from process 1. width_slice : 640
+Sended 1280 from process 640 1280 
+Complete 1
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 8 
+
+
+  Process 0 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 2 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 3 of 4 started on nicolas-GE60-2QD. n = 1280
+4/4 invoked
+Goes from 320 to 640 of 1280 columns
+
+Goes from 640 to 960 of 1280 columns
+
+Goes from 0 to 320 of 1280 columns
+
+Goes from 960 to 1280 of 1280 columns
+
+Wer ist hier? 960 - 1280
+
+Wer ist hier? 640 - 960
+
+Wer ist hier? 320 - 640
+
+Wer ist hier? 0 - 320
+
+Receiving from process 1. width_slice : 320
+Complete 1
+Sended 1280 from process 320 640 
+Receiving from process 2. width_slice : 320
+Complete 2
+Sended 1280 from process 640 960 
+Receiving from process 3. width_slice : 320
+Complete 3
+Sended 1280 from process 960 1280 
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 8 
+
+
+      Process 3 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 7 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 2 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 5 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 6 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 0 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 4 of 8 started on nicolas-GE60-2QD. n = 1280
+8/8 invoked
+Goes from 1120 to 1280 of 1280 columns
+
+Goes from 320 to 480 of 1280 columns
+
+Goes from 960 to 1120 of 1280 columns
+
+Goes from 640 to 800 of 1280 columns
+
+Goes from 480 to 640 of 1280 columns
+
+Goes from 0 to 160 of 1280 columns
+
+Goes from 800 to 960 of 1280 columns
+
+Goes from 160 to 320 of 1280 columns
+
+Wer ist hier? 480 - 640
+
+Wer ist hier? 1120 - 1280
+
+Wer ist hier? 320 - 480
+
+Wer ist hier? 0 - 160
+
+Wer ist hier? 800 - 960
+
+Wer ist hier? 960 - 1120
+
+Receiving from process 1. width_slice : 160
+Wer ist hier? 640 - 800
+
+Wer ist hier? 160 - 320
+
+Complete 1
+Sended 1280 from process 160 320 
+Receiving from process 2. width_slice : 160
+Sended 1280 from process 320 480 
+Complete 2
+Receiving from process 3. width_slice : 160
+Complete 3
+Sended 1280 from process 480 640 
+Receiving from process 4. width_slice : 160
+Complete 4
+Sended 1280 from process 640 800 
+Receiving from process 5. width_slice : 160
+Complete 5
+Sended 1280 from process 800 960 
+Receiving from process 6. width_slice : 160
+Sended 1280 from process 960 1120 
+Complete 6
+Receiving from process 7. width_slice : 160
+Complete 7
+Sended 1280 from process 1120 1280 
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 8 
+
+
+              Process 7 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 8 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 9 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 3 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 6 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 15 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 2 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 0 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 4 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 5 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 12 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 10 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 14 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 13 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 11 of 16 started on nicolas-GE60-2QD. n = 1280
+16/16 invoked
+Goes from 240 to 320 of 1280 columns
+
+Goes from 80 to 160 of 1280 columns
+
+Goes from 400 to 480 of 1280 columns
+
+Goes from 480 to 560 of 1280 columns
+
+Goes from 320 to 400 of 1280 columns
+
+Goes from 1200 to 1280 of 1280 columns
+
+Goes from 160 to 240 of 1280 columns
+
+Goes from 640 to 720 of 1280 columns
+
+Goes from 560 to 640 of 1280 columns
+
+Goes from 720 to 800 of 1280 columns
+
+Goes from 880 to 960 of 1280 columns
+
+Goes from 0 to 80 of 1280 columns
+
+Goes from 1120 to 1200 of 1280 columns
+
+Goes from 1040 to 1120 of 1280 columns
+
+Goes from 800 to 880 of 1280 columns
+
+Goes from 960 to 1040 of 1280 columns
+
+Wer ist hier? 1200 - 1280
+
+Wer ist hier? 320 - 400
+
+Wer ist hier? 640 - 720
+
+Wer ist hier? 560 - 640
+
+Wer ist hier? 80 - 160
+
+Wer ist hier? 800 - 880
+
+Wer ist hier? 480 - 560
+
+Wer ist hier? 400 - 480
+
+Wer ist hier? 720 - 800
+
+Wer ist hier? 960 - 1040
+
+Wer ist hier? 1120 - 1200
+
+Wer ist hier? 240 - 320
+
+Wer ist hier? 1040 - 1120
+
+Wer ist hier? 160 - 240
+
+Wer ist hier? 0 - 80
+
+Receiving from process 1. width_slice : 80
+Sended 1280 from process 80 160 
+Complete 1
+Receiving from process 2. width_slice : 80
+Complete 2
+Sended 1280 from process 160 240 
+Receiving from process 3. width_slice : 80
+Sended 1280 from process 240 320 
+Complete 3
+Receiving from process 4. width_slice : 80
+Complete 4
+Sended 1280 from process 320 400 
+Receiving from process 5. width_slice : 80
+Complete 5
+Sended 1280 from process 400 480 
+Receiving from process 6. width_slice : 80
+Sended 1280 from process 480 560 
+Complete 6
+Receiving from process 7. width_slice : 80
+Sended 1280 from process 560 640 
+Complete 7
+Receiving from process 8. width_slice : 80
+Complete 8
+Sended 1280 from process 640 720 
+Receiving from process 9. width_slice : 80
+Complete 9
+Sended 1280 from process 720 800 
+Receiving from process 10. width_slice : 80
+Complete 10
+Sended 1280 from process 800 880 
+Receiving from process 11. width_slice : 80
+Wer ist hier? 880 - 960
+
+Complete 11
+Sended 1280 from process 880 960 
+Receiving from process 12. width_slice : 80
+Sended 1280 from process 960 1040 
+Complete 12
+Receiving from process 13. width_slice : 80
+Complete 13
+Sended 1280 from process 1040 1120 
+Receiving from process 14. width_slice : 80
+Sended 1280 from process 1120 1200 
+Complete 14
+Receiving from process 15. width_slice : 80
+Complete 15
+Sended 1280 from process 1200 1280 
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 8 
+
+
+                              Process 0 of 2 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 2 started on nicolas-GE60-2QD. n = 1280
+2/2 invoked
+Goes from 0 to 640 of 1280 columns
+
+Goes from 640 to 1280 of 1280 columns
+
+Wer ist hier? 0 - 640
+
+Receiving from process 1. width_slice : 640
+Wer ist hier? 640 - 1280
+
+Complete 1
+Sended 1280 from process 640 1280 
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 15 
+
+
+  Process 3 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 0 of 4 started on nicolas-GE60-2QD. n = 1280
+Process 2 of 4 started on nicolas-GE60-2QD. n = 1280
+4/4 invoked
+Goes from 320 to 640 of 1280 columns
+
+Goes from 960 to 1280 of 1280 columns
+
+Goes from 640 to 960 of 1280 columns
+
+Goes from 0 to 320 of 1280 columns
+
+Wer ist hier? 960 - 1280
+
+Wer ist hier? 320 - 640
+
+Wer ist hier? 0 - 320
+
+Receiving from process 1. width_slice : 320
+Complete 1
+Sended 1280 from process 320 640 
+Receiving from process 2. width_slice : 320
+Wer ist hier? 640 - 960
+
+Complete 2
+Sended 1280 from process 640 960 
+Receiving from process 3. width_slice : 320
+Complete 3
+Sended 1280 from process 960 1280 
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 15 
+
+
+      Process 2 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 3 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 7 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 6 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 0 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 4 of 8 started on nicolas-GE60-2QD. n = 1280
+Process 5 of 8 started on nicolas-GE60-2QD. n = 1280
+8/8 invoked
+Goes from 320 to 480 of 1280 columns
+
+Goes from 0 to 160 of 1280 columns
+
+Goes from 160 to 320 of 1280 columns
+
+Goes from 640 to 800 of 1280 columns
+
+Goes from 1120 to 1280 of 1280 columns
+
+Goes from 960 to 1120 of 1280 columns
+
+Goes from 800 to 960 of 1280 columns
+
+Goes from 480 to 640 of 1280 columns
+
+Wer ist hier? 480 - 640
+
+Wer ist hier? 160 - 320
+
+Wer ist hier? 640 - 800
+
+Wer ist hier? 0 - 160
+
+Wer ist hier? 960 - 1120
+
+Wer ist hier? 320 - 480
+
+Receiving from process 1. width_slice : 160
+Sended 1280 from process 160 320 
+Complete 1
+Receiving from process 2. width_slice : 160
+Wer ist hier? 1120 - 1280
+
+Complete 2
+Sended 1280 from process 320 480 
+Receiving from process 3. width_slice : 160
+Sended 1280 from process 480 640 
+Complete 3
+Receiving from process 4. width_slice : 160
+Complete 4
+Sended 1280 from process 640 800 
+Receiving from process 5. width_slice : 160
+Wer ist hier? 800 - 960
+
+Complete 5
+Sended 1280 from process 800 960 
+Receiving from process 6. width_slice : 160
+Sended 1280 from process 960 1120 
+Complete 6
+Receiving from process 7. width_slice : 160
+Complete 7
+Sended 1280 from process 1120 1280 
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 15 
+
+
+              Process 4 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 8 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 13 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 14 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 3 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 7 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 9 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 5 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 6 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 1 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 11 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 0 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 2 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 10 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 12 of 16 started on nicolas-GE60-2QD. n = 1280
+Process 15 of 16 started on nicolas-GE60-2QD. n = 1280
+16/16 invoked
+Goes from 160 to 240 of 1280 columns
+
+Goes from 400 to 480 of 1280 columns
+
+Goes from 240 to 320 of 1280 columns
+
+Goes from 80 to 160 of 1280 columns
+
+Goes from 1040 to 1120 of 1280 columns
+
+Goes from 1120 to 1200 of 1280 columns
+
+Goes from 800 to 880 of 1280 columns
+
+Goes from 480 to 560 of 1280 columns
+
+Goes from 320 to 400 of 1280 columns
+
+Goes from 0 to 80 of 1280 columns
+
+Goes from 640 to 720 of 1280 columns
+
+Goes from 720 to 800 of 1280 columns
+
+Goes from 1200 to 1280 of 1280 columns
+
+Goes from 880 to 960 of 1280 columns
+
+Goes from 560 to 640 of 1280 columns
+
+Goes from 960 to 1040 of 1280 columns
+
+Wer ist hier? 0 - 80
+
+Wer ist hier? 80 - 160
+
+Receiving from process 1. width_slice : 80
+Sended 1280 from process 80 160 
+Complete 1
+Receiving from process 2. width_slice : 80
+Wer ist hier? 1120 - 1200
+
+Wer ist hier? 560 - 640
+
+Wer ist hier? 400 - 480
+
+Wer ist hier? 1040 - 1120
+
+Wer ist hier? 320 - 400
+
+Wer ist hier? 640 - 720
+
+Wer ist hier? 1200 - 1280
+
+Wer ist hier? 480 - 560
+
+Wer ist hier? 160 - 240
+
+Wer ist hier? 240 - 320
+
+Wer ist hier? 960 - 1040
+
+Complete 2
+Sended 1280 from process 160 240 
+Receiving from process 3. width_slice : 80
+Complete 3
+Sended 1280 from process 240 320 
+Receiving from process 4. width_slice : 80
+Complete 4
+Sended 1280 from process 320 400 
+Receiving from process 5. width_slice : 80
+Complete 5
+Sended 1280 from process 400 480 
+Receiving from process 6. width_slice : 80
+Sended 1280 from process 480 560 
+Complete 6
+Receiving from process 7. width_slice : 80
+Complete 7
+Sended 1280 from process 560 640 
+Receiving from process 8. width_slice : 80
+Complete 8
+Sended 1280 from process 640 720 
+Receiving from process 9. width_slice : 80
+Wer ist hier? 880 - 960
+
+Wer ist hier? 720 - 800
+
+Wer ist hier? 800 - 880
+
+Complete 9
+Sended 1280 from process 720 800 
+Receiving from process 10. width_slice : 80
+Sended 1280 from process 800 880 
+Complete 10
+Receiving from process 11. width_slice : 80
+Complete 11
+Sended 1280 from process 880 960 
+Receiving from process 12. width_slice : 80
+Complete 12
+Sended 1280 from process 960 1040 
+Receiving from process 13. width_slice : 80
+Complete 13
+Receiving from process 14. width_slice : 80
+Sended 1280 from process 1040 1120 
+Complete 14
+Sended 1280 from process 1120 1200 
+Receiving from process 15. width_slice : 80
+Sended 1280 from process 1200 1280 
+Complete 15
+Writing final image!
+Rows: 720 Cols: 1280
+Kernel Size: 15 
+
+
+                              Process 1 of 2 started on nicolas-GE60-2QD. n = 1920
+Process 0 of 2 started on nicolas-GE60-2QD. n = 1920
+2/2 invoked
+Goes from 960 to 1920 of 1920 columns
+
+Goes from 0 to 960 of 1920 columns
+
+Wer ist hier? 960 - 1920
+
+Wer ist hier? 0 - 960
+
+Receiving from process 1. width_slice : 960
+Complete 1
+Sended 1920 from process 960 1920 
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 3 
+
+
+  Process 1 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 0 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 4 started on nicolas-GE60-2QD. n = 1920
+4/4 invoked
+Goes from 0 to 480 of 1920 columns
+
+Goes from 1440 to 1920 of 1920 columns
+
+Goes from 480 to 960 of 1920 columns
+
+Goes from 960 to 1440 of 1920 columns
+
+Wer ist hier? 1440 - 1920
+
+Wer ist hier? 0 - 480
+
+Wer ist hier? 960 - 1440
+
+Receiving from process 1. width_slice : 480
+Wer ist hier? 480 - 960
+
+Complete 1
+Sended 1920 from process 480 960 
+Receiving from process 2. width_slice : 480
+Sended 1920 from process 960 1440 
+Complete 2
+Receiving from process 3. width_slice : 480
+Complete 3
+Sended 1920 from process 1440 1920 
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 3 
+
+
+      Process 0 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 4 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 6 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 5 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 7 of 8 started on nicolas-GE60-2QD. n = 1920
+8/8 invoked
+Goes from 1680 to 1920 of 1920 columns
+
+Goes from 1200 to 1440 of 1920 columns
+
+Goes from 480 to 720 of 1920 columns
+
+Goes from 1440 to 1680 of 1920 columns
+
+Goes from 720 to 960 of 1920 columns
+
+Goes from 960 to 1200 of 1920 columns
+
+Goes from 240 to 480 of 1920 columns
+
+Goes from 0 to 240 of 1920 columns
+
+Wer ist hier? 240 - 480
+
+Wer ist hier? 1680 - 1920
+
+Wer ist hier? 1200 - 1440
+
+Wer ist hier? 480 - 720
+
+Wer ist hier? 720 - 960
+
+Wer ist hier? 0 - 240
+
+Wer ist hier? 960 - 1200
+
+Receiving from process 1. width_slice : 240
+Sended 1920 from process 240 480 
+Complete 1
+Receiving from process 2. width_slice : 240
+Sended 1920 from process 480 720 
+Complete 2
+Receiving from process 3. width_slice : 240
+Complete 3
+Sended 1920 from process 720 960 
+Receiving from process 4. width_slice : 240
+Complete 4
+Sended 1920 from process 960 1200 
+Receiving from process 5. width_slice : 240
+Complete 5
+Sended 1920 from process 1200 1440 
+Receiving from process 6. width_slice : 240
+Wer ist hier? 1440 - 1680
+
+Complete 6
+Sended 1920 from process 1440 1680 
+Receiving from process 7. width_slice : 240
+Complete 7
+Sended 1920 from process 1680 1920 
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 3 
+
+
+              Process 12 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 5 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 6 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 15 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 11 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 10 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 7 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 14 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 8 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 13 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 9 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 4 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 0 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 16 started on nicolas-GE60-2QD. n = 1920
+16/16 invoked
+Goes from 960 to 1080 of 1920 columns
+
+Goes from 1800 to 1920 of 1920 columns
+
+Goes from 1320 to 1440 of 1920 columns
+
+Goes from 840 to 960 of 1920 columns
+
+Goes from 1080 to 1200 of 1920 columns
+
+Goes from 120 to 240 of 1920 columns
+
+Goes from 1440 to 1560 of 1920 columns
+
+Goes from 480 to 600 of 1920 columns
+
+Goes from 0 to 120 of 1920 columns
+
+Goes from 1200 to 1320 of 1920 columns
+
+Goes from 1680 to 1800 of 1920 columns
+
+Goes from 360 to 480 of 1920 columns
+
+Goes from 240 to 360 of 1920 columns
+
+Goes from 720 to 840 of 1920 columns
+
+Goes from 600 to 720 of 1920 columns
+
+Goes from 1560 to 1680 of 1920 columns
+
+Wer ist hier? 1800 - 1920
+
+Wer ist hier? 1320 - 1440
+
+Wer ist hier? 1680 - 1800
+
+Wer ist hier? 840 - 960
+
+Wer ist hier? 120 - 240
+
+Wer ist hier? 1080 - 1200
+
+Wer ist hier? 1440 - 1560
+
+Wer ist hier? 1560 - 1680
+
+Wer ist hier? 960 - 1080
+
+Wer ist hier? 240 - 360
+
+Wer ist hier? 720 - 840
+
+Wer ist hier? 0 - 120
+
+Wer ist hier? 360 - 480
+
+Receiving from process 1. width_slice : 120
+Sended 1920 from process 120 240 
+Complete 1
+Receiving from process 2. width_slice : 120
+Wer ist hier? 480 - 600
+
+Complete 2
+Sended 1920 from process 240 360 
+Receiving from process 3. width_slice : 120
+Complete 3
+Sended 1920 from process 360 480 
+Receiving from process 4. width_slice : 120
+Complete 4
+Sended 1920 from process 480 600 
+Receiving from process 5. width_slice : 120
+Wer ist hier? 1200 - 1320
+
+Wer ist hier? 600 - 720
+
+Sended 1920 from process 600 720 
+Complete 5
+Receiving from process 6. width_slice : 120
+Sended 1920 from process 720 840 
+Complete 6
+Receiving from process 7. width_slice : 120
+Complete 7
+Sended 1920 from process 840 960 
+Receiving from process 8. width_slice : 120
+Complete 8
+Sended 1920 from process 960 1080 
+Receiving from process 9. width_slice : 120
+Complete 9
+Sended 1920 from process 1080 1200 
+Receiving from process 10. width_slice : 120
+Complete 10
+Sended 1920 from process 1200 1320 
+Receiving from process 11. width_slice : 120
+Complete 11
+Sended 1920 from process 1320 1440 
+Receiving from process 12. width_slice : 120
+Complete 12
+Sended 1920 from process 1440 1560 
+Receiving from process 13. width_slice : 120
+Sended 1920 from process 1560 1680 
+Complete 13
+Receiving from process 14. width_slice : 120
+Complete 14
+Sended 1920 from process 1680 1800 
+Receiving from process 15. width_slice : 120
+Sended 1920 from process 1800 1920 
+Complete 15
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 3 
+
+
+                              Process 0 of 2 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 2 started on nicolas-GE60-2QD. n = 1920
+2/2 invoked
+Goes from 0 to 960 of 1920 columns
+
+Goes from 960 to 1920 of 1920 columns
+
+Wer ist hier? 960 - 1920
+
+Wer ist hier? 0 - 960
+
+Receiving from process 1. width_slice : 960
+Sended 1920 from process 960 1920 
+Complete 1
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 8 
+
+
+  Process 0 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 4 started on nicolas-GE60-2QD. n = 1920
+4/4 invoked
+Goes from 0 to 480 of 1920 columns
+
+Goes from 1440 to 1920 of 1920 columns
+
+Goes from 480 to 960 of 1920 columns
+
+Goes from 960 to 1440 of 1920 columns
+
+Wer ist hier? 960 - 1440
+
+Wer ist hier? 0 - 480
+
+Receiving from process 1. width_slice : 480
+Wer ist hier? 1440 - 1920
+
+Wer ist hier? 480 - 960
+
+Sended 1920 from process 480 960 
+Complete 1
+Receiving from process 2. width_slice : 480
+Sended 1920 from process 960 1440 
+Complete 2
+Receiving from process 3. width_slice : 480
+Complete 3
+Sended 1920 from process 1440 1920 
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 8 
+
+
+      Process 6 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 0 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 4 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 5 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 7 of 8 started on nicolas-GE60-2QD. n = 1920
+8/8 invoked
+Goes from 240 to 480 of 1920 columns
+
+Goes from 720 to 960 of 1920 columns
+
+Goes from 1200 to 1440 of 1920 columns
+
+Goes from 1440 to 1680 of 1920 columns
+
+Goes from 480 to 720 of 1920 columns
+
+Goes from 960 to 1200 of 1920 columns
+
+Goes from 1680 to 1920 of 1920 columns
+
+Goes from 0 to 240 of 1920 columns
+
+Wer ist hier? 0 - 240
+
+Wer ist hier? 480 - 720
+
+Receiving from process 1. width_slice : 240
+Wer ist hier? 1680 - 1920
+
+Wer ist hier? 1440 - 1680
+
+Wer ist hier? 240 - 480
+
+Complete 1
+Sended 1920 from process 240 480 
+Receiving from process 2. width_slice : 240
+Sended 1920 from process 480 720 
+Complete 2
+Receiving from process 3. width_slice : 240
+Wer ist hier? 720 - 960
+
+Wer ist hier? 1200 - 1440
+
+Complete 3
+Sended 1920 from process 720 960 
+Receiving from process 4. width_slice : 240
+Wer ist hier? 960 - 1200
+
+Sended 1920 from process 960 1200 
+Complete 4
+Receiving from process 5. width_slice : 240
+Sended 1920 from process 1200 1440 
+Complete 5
+Receiving from process 6. width_slice : 240
+Sended 1920 from process 1440 1680 
+Complete 6
+Receiving from process 7. width_slice : 240
+Sended 1920 from process 1680 1920 
+Complete 7
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 8 
+
+
+              Process 12 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 5 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 7 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 8 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 4 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 9 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 10 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 6 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 13 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 0 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 11 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 14 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 15 of 16 started on nicolas-GE60-2QD. n = 1920
+16/16 invoked
+Goes from 1800 to 1920 of 1920 columns
+
+Goes from 1680 to 1800 of 1920 columns
+
+Goes from 360 to 480 of 1920 columns
+
+Goes from 240 to 360 of 1920 columns
+
+Goes from 720 to 840 of 1920 columns
+
+Goes from 480 to 600 of 1920 columns
+
+Goes from 1200 to 1320 of 1920 columns
+
+Goes from 1080 to 1200 of 1920 columns
+
+Goes from 120 to 240 of 1920 columns
+
+Goes from 1560 to 1680 of 1920 columns
+
+Goes from 840 to 960 of 1920 columns
+
+Goes from 600 to 720 of 1920 columns
+
+Goes from 1320 to 1440 of 1920 columns
+
+Goes from 1440 to 1560 of 1920 columns
+
+Goes from 960 to 1080 of 1920 columns
+
+Goes from 0 to 120 of 1920 columns
+
+Wer ist hier? 720 - 840
+
+Wer ist hier? 840 - 960
+
+Wer ist hier? 1680 - 1800
+
+Wer ist hier? 360 - 480
+
+Wer ist hier? 1080 - 1200
+
+Wer ist hier? 1800 - 1920
+
+Wer ist hier? 120 - 240
+
+Wer ist hier? 480 - 600
+
+Wer ist hier? 1560 - 1680
+
+Wer ist hier? 600 - 720
+
+Wer ist hier? 0 - 120
+
+Wer ist hier? 240 - 360
+
+Receiving from process 1. width_slice : 120
+Sended 1920 from process 120 240 
+Complete 1
+Receiving from process 2. width_slice : 120
+Wer ist hier? 1320 - 1440
+
+Wer ist hier? 1200 - 1320
+
+Sended 1920 from process 240 360 
+Complete 2
+Receiving from process 3. width_slice : 120
+Complete 3
+Sended 1920 from process 360 480 
+Receiving from process 4. width_slice : 120
+Complete 4
+Sended 1920 from process 480 600 
+Receiving from process 5. width_slice : 120
+Complete 5
+Sended 1920 from process 600 720 
+Receiving from process 6. width_slice : 120
+Complete 6
+Sended 1920 from process 720 840 
+Receiving from process 7. width_slice : 120
+Complete 7
+Sended 1920 from process 840 960 
+Receiving from process 8. width_slice : 120
+Wer ist hier? 960 - 1080
+
+Wer ist hier? 1440 - 1560
+
+Complete 8
+Receiving from process 9. width_slice : 120
+Sended 1920 from process 960 1080 
+Complete 9
+Sended 1920 from process 1080 1200 
+Receiving from process 10. width_slice : 120
+Sended 1920 from process 1200 1320 
+Complete 10
+Receiving from process 11. width_slice : 120
+Complete 11
+Sended 1920 from process 1320 1440 
+Receiving from process 12. width_slice : 120
+Complete 12
+Sended 1920 from process 1440 1560 
+Receiving from process 13. width_slice : 120
+Sended 1920 from process 1560 1680 
+Complete 13
+Receiving from process 14. width_slice : 120
+Complete 14
+Sended 1920 from process 1680 1800 
+Receiving from process 15. width_slice : 120
+Complete 15
+Sended 1920 from process 1800 1920 
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 8 
+
+
+                              Process 0 of 2 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 2 started on nicolas-GE60-2QD. n = 1920
+2/2 invoked
+Goes from 0 to 960 of 1920 columns
+
+Goes from 960 to 1920 of 1920 columns
+
+Wer ist hier? 0 - 960
+
+Wer ist hier? 960 - 1920
+
+Receiving from process 1. width_slice : 960
+Sended 1920 from process 960 1920 
+Complete 1
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 15 
+
+
+  Process 1 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 0 of 4 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 4 started on nicolas-GE60-2QD. n = 1920
+4/4 invoked
+Goes from 960 to 1440 of 1920 columns
+
+Goes from 0 to 480 of 1920 columns
+
+Goes from 1440 to 1920 of 1920 columns
+
+Goes from 480 to 960 of 1920 columns
+
+Wer ist hier? 960 - 1440
+
+Wer ist hier? 480 - 960
+
+Wer ist hier? 0 - 480
+
+Receiving from process 1. width_slice : 480
+Sended 1920 from process 480 960 
+Complete 1
+Receiving from process 2. width_slice : 480
+Complete 2
+Sended 1920 from process 960 1440 
+Receiving from process 3. width_slice : 480
+Wer ist hier? 1440 - 1920
+
+Complete 3
+Sended 1920 from process 1440 1920 
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 15 
+
+
+      Process 5 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 0 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 6 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 7 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 8 started on nicolas-GE60-2QD. n = 1920
+Process 4 of 8 started on nicolas-GE60-2QD. n = 1920
+8/8 invoked
+Goes from 0 to 240 of 1920 columns
+
+Goes from 240 to 480 of 1920 columns
+
+Goes from 1440 to 1680 of 1920 columns
+
+Goes from 480 to 720 of 1920 columns
+
+Goes from 1680 to 1920 of 1920 columns
+
+Goes from 960 to 1200 of 1920 columns
+
+Goes from 720 to 960 of 1920 columns
+
+Goes from 1200 to 1440 of 1920 columns
+
+Wer ist hier? 1440 - 1680
+
+Wer ist hier? 0 - 240
+
+Wer ist hier? 480 - 720
+
+Wer ist hier? 960 - 1200
+
+Receiving from process 1. width_slice : 240
+Wer ist hier? 1200 - 1440
+
+Wer ist hier? 240 - 480
+
+Wer ist hier? 1680 - 1920
+
+Sended 1920 from process 240 480 
+Complete 1
+Receiving from process 2. width_slice : 240
+Complete 2
+Sended 1920 from process 480 720 
+Receiving from process 3. width_slice : 240
+Wer ist hier? 720 - 960
+
+Sended 1920 from process 720 960 
+Complete 3
+Receiving from process 4. width_slice : 240
+Complete 4
+Sended 1920 from process 960 1200 
+Receiving from process 5. width_slice : 240
+Complete 5
+Sended 1920 from process 1200 1440 
+Receiving from process 6. width_slice : 240
+Complete 6
+Sended 1920 from process 1440 1680 
+Receiving from process 7. width_slice : 240
+Complete 7
+Sended 1920 from process 1680 1920 
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 15 
+
+
+              Process 0 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 4 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 2 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 9 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 7 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 12 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 11 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 10 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 13 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 8 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 1 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 14 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 15 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 3 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 6 of 16 started on nicolas-GE60-2QD. n = 1920
+Process 5 of 16 started on nicolas-GE60-2QD. n = 1920
+16/16 invoked
+Goes from 1680 to 1800 of 1920 columns
+
+Goes from 1800 to 1920 of 1920 columns
+
+Goes from 1080 to 1200 of 1920 columns
+
+Goes from 1320 to 1440 of 1920 columns
+
+Goes from 960 to 1080 of 1920 columns
+
+Goes from 480 to 600 of 1920 columns
+
+Goes from 1200 to 1320 of 1920 columns
+
+Goes from 600 to 720 of 1920 columns
+
+Goes from 240 to 360 of 1920 columns
+
+Goes from 0 to 120 of 1920 columns
+
+Goes from 360 to 480 of 1920 columns
+
+Goes from 120 to 240 of 1920 columns
+
+Goes from 840 to 960 of 1920 columns
+
+Goes from 1560 to 1680 of 1920 columns
+
+Goes from 1440 to 1560 of 1920 columns
+
+Goes from 720 to 840 of 1920 columns
+
+Wer ist hier? 1320 - 1440
+
+Wer ist hier? 720 - 840
+
+Wer ist hier? 1200 - 1320
+
+Wer ist hier? 360 - 480
+
+Wer ist hier? 120 - 240
+
+Wer ist hier? 1800 - 1920
+
+Wer ist hier? 1680 - 1800
+
+Wer ist hier? 1440 - 1560
+
+Wer ist hier? 1080 - 1200
+
+Wer ist hier? 600 - 720
+
+Wer ist hier? 960 - 1080
+
+Wer ist hier? 1560 - 1680
+
+Wer ist hier? 0 - 120
+
+Wer ist hier? 240 - 360
+
+Receiving from process 1. width_slice : 120
+Sended 1920 from process 120 240 
+Complete 1
+Receiving from process 2. width_slice : 120
+Complete 2
+Sended 1920 from process 240 360 
+Receiving from process 3. width_slice : 120
+Sended 1920 from process 360 480 
+Complete 3
+Receiving from process 4. width_slice : 120
+Wer ist hier? 480 - 600
+
+Complete 4
+Sended 1920 from process 480 600 
+Receiving from process 5. width_slice : 120
+Complete 5
+Sended 1920 from process 600 720 
+Receiving from process 6. width_slice : 120
+Complete 6
+Sended 1920 from process 720 840 
+Receiving from process 7. width_slice : 120
+Wer ist hier? 840 - 960
+
+Complete 7
+Sended 1920 from process 840 960 
+Receiving from process 8. width_slice : 120
+Sended 1920 from process 960 1080 
+Complete 8
+Receiving from process 9. width_slice : 120
+Sended 1920 from process 1080 1200 
+Complete 9
+Receiving from process 10. width_slice : 120
+Sended 1920 from process 1200 1320 
+Complete 10
+Receiving from process 11. width_slice : 120
+Complete 11
+Sended 1920 from process 1320 1440 
+Receiving from process 12. width_slice : 120
+Complete 12
+Sended 1920 from process 1440 1560 
+Receiving from process 13. width_slice : 120
+Complete 13
+Sended 1920 from process 1560 1680 
+Receiving from process 14. width_slice : 120
+Complete 14
+Sended 1920 from process 1680 1800 
+Receiving from process 15. width_slice : 120
+Complete 15
+Sended 1920 from process 1800 1920 
+Writing final image!
+Rows: 1080 Cols: 1920
+Kernel Size: 15 
+
+
+                              Process 1 of 2 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 2 started on nicolas-GE60-2QD. n = 3840
+2/2 invoked
+Goes from 0 to 1920 of 3840 columns
+
+Goes from 1920 to 3840 of 3840 columns
+
+Wer ist hier? 0 - 1920
+
+Receiving from process 1. width_slice : 1920
+Wer ist hier? 1920 - 3840
+
+Sended 3840 from process 1920 3840 
+Complete 1
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 3 
+
+
+  Process 1 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 3 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 4 started on nicolas-GE60-2QD. n = 3840
+4/4 invoked
+Goes from 1920 to 2880 of 3840 columns
+
+Goes from 960 to 1920 of 3840 columns
+
+Goes from 2880 to 3840 of 3840 columns
+
+Goes from 0 to 960 of 3840 columns
+
+Wer ist hier? 1920 - 2880
+
+Wer ist hier? 960 - 1920
+
+Wer ist hier? 2880 - 3840
+
+Wer ist hier? 0 - 960
+
+Receiving from process 1. width_slice : 960
+Sended 3840 from process 960 1920 
+Complete 1
+Receiving from process 2. width_slice : 960
+Complete 2
+Sended 3840 from process 1920 2880 
+Receiving from process 3. width_slice : 960
+Complete 3
+Sended 3840 from process 2880 3840 
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 3 
+
+
+      Process 5 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 6 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 1 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 3 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 4 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 7 of 8 started on nicolas-GE60-2QD. n = 3840
+8/8 invoked
+Goes from 2400 to 2880 of 3840 columns
+
+Goes from 1440 to 1920 of 3840 columns
+
+Goes from 2880 to 3360 of 3840 columns
+
+Goes from 960 to 1440 of 3840 columns
+
+Goes from 480 to 960 of 3840 columns
+
+Goes from 1920 to 2400 of 3840 columns
+
+Goes from 3360 to 3840 of 3840 columns
+
+Goes from 0 to 480 of 3840 columns
+
+Wer ist hier? 0 - 480
+
+Receiving from process 1. width_slice : 480
+Wer ist hier? 2880 - 3360
+
+Wer ist hier? 3360 - 3840
+
+Wer ist hier? 960 - 1440
+
+Wer ist hier? 2400 - 2880
+
+Wer ist hier? 480 - 960
+
+Complete 1
+Sended 3840 from process 480 960 
+Receiving from process 2. width_slice : 480
+Complete 2
+Sended 3840 from process 960 1440 
+Wer ist hier? 1440 - 1920
+
+Receiving from process 3. width_slice : 480
+Wer ist hier? 1920 - 2400
+
+Complete 3
+Sended 3840 from process 1440 1920 
+Receiving from process 4. width_slice : 480
+Sended 3840 from process 1920 2400 
+Complete 4
+Receiving from process 5. width_slice : 480
+Sended 3840 from process 2400 2880 
+Complete 5
+Receiving from process 6. width_slice : 480
+Complete 6
+Sended 3840 from process 2880 3360 
+Receiving from process 7. width_slice : 480
+Sended 3840 from process 3360 3840 
+Complete 7
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 3 
+
+
+              Process 3 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 8 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 9 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 13 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 1 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 11 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 12 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 14 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 15 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 5 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 6 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 7 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 10 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 4 of 16 started on nicolas-GE60-2QD. n = 3840
+16/16 invoked
+Goes from 480 to 720 of 3840 columns
+
+Goes from 1920 to 2160 of 3840 columns
+
+Goes from 2400 to 2640 of 3840 columns
+
+Goes from 960 to 1200 of 3840 columns
+
+Goes from 0 to 240 of 3840 columns
+
+Goes from 720 to 960 of 3840 columns
+
+Goes from 240 to 480 of 3840 columns
+
+Goes from 3600 to 3840 of 3840 columns
+
+Goes from 3120 to 3360 of 3840 columns
+
+Goes from 2880 to 3120 of 3840 columns
+
+Goes from 2640 to 2880 of 3840 columns
+
+Goes from 3360 to 3600 of 3840 columns
+
+Goes from 1680 to 1920 of 3840 columns
+
+Goes from 2160 to 2400 of 3840 columns
+
+Goes from 1440 to 1680 of 3840 columns
+
+Goes from 1200 to 1440 of 3840 columns
+
+Wer ist hier? 480 - 720
+
+Wer ist hier? 1920 - 2160
+
+Wer ist hier? 1200 - 1440
+
+Wer ist hier? 3360 - 3600
+
+Wer ist hier? 720 - 960
+
+Wer ist hier? 0 - 240
+
+Wer ist hier? 2400 - 2640
+
+Receiving from process 1. width_slice : 240
+Wer ist hier? 2160 - 2400
+
+Wer ist hier? 2880 - 3120
+
+Wer ist hier? 960 - 1200
+
+Wer ist hier? 3120 - 3360
+
+Wer ist hier? 3600 - 3840
+
+Wer ist hier? 240 - 480
+
+Complete 1
+Sended 3840 from process 240 480 
+Receiving from process 2. width_slice : 240
+Complete 2
+Sended 3840 from process 480 720 
+Receiving from process 3. width_slice : 240
+Complete 3
+Sended 3840 from process 720 960 
+Receiving from process 4. width_slice : 240
+Sended 3840 from process 960 1200 
+Complete 4
+Receiving from process 5. width_slice : 240
+Complete 5
+Sended 3840 from process 1200 1440 
+Receiving from process 6. width_slice : 240
+Wer ist hier? 1440 - 1680
+
+Wer ist hier? 1680 - 1920
+
+Wer ist hier? 2640 - 2880
+
+Sended 3840 from process 1440 1680 
+Complete 6
+Receiving from process 7. width_slice : 240
+Sended 3840 from process 1680 1920 
+Complete 7
+Receiving from process 8. width_slice : 240
+Complete 8
+Sended 3840 from process 1920 2160 
+Receiving from process 9. width_slice : 240
+Complete 9
+Sended 3840 from process 2160 2400 
+Receiving from process 10. width_slice : 240
+Complete 10
+Sended 3840 from process 2400 2640 
+Receiving from process 11. width_slice : 240
+Sended 3840 from process 2640 2880 
+Complete 11
+Receiving from process 12. width_slice : 240
+Sended 3840 from process 2880 3120 
+Complete 12
+Receiving from process 13. width_slice : 240
+Sended 3840 from process 3120 3360 
+Complete 13
+Receiving from process 14. width_slice : 240
+Sended 3840 from process 3360 3600 
+Complete 14
+Receiving from process 15. width_slice : 240
+Complete 15
+Sended 3840 from process 3600 3840 
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 3 
+
+
+                              Process 0 of 2 started on nicolas-GE60-2QD. n = 3840
+Process 1 of 2 started on nicolas-GE60-2QD. n = 3840
+2/2 invoked
+Goes from 1920 to 3840 of 3840 columns
+
+Goes from 0 to 1920 of 3840 columns
+
+Wer ist hier? 0 - 1920
+
+Receiving from process 1. width_slice : 1920
+Wer ist hier? 1920 - 3840
+
+Complete 1
+Sended 3840 from process 1920 3840 
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 8 
+
+
+  Process 1 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 3 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 4 started on nicolas-GE60-2QD. n = 3840
+4/4 invoked
+Goes from 960 to 1920 of 3840 columns
+
+Goes from 0 to 960 of 3840 columns
+
+Goes from 2880 to 3840 of 3840 columns
+
+Goes from 1920 to 2880 of 3840 columns
+
+Wer ist hier? 2880 - 3840
+
+Wer ist hier? 960 - 1920
+
+Wer ist hier? 1920 - 2880
+
+Wer ist hier? 0 - 960
+
+Receiving from process 1. width_slice : 960
+Sended 3840 from process 960 1920 
+Complete 1
+Receiving from process 2. width_slice : 960
+Complete 2
+Sended 3840 from process 1920 2880 
+Receiving from process 3. width_slice : 960
+Complete 3
+Sended 3840 from process 2880 3840 
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 8 
+
+
+      Process 3 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 1 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 4 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 5 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 6 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 7 of 8 started on nicolas-GE60-2QD. n = 3840
+8/8 invoked
+Goes from 2880 to 3360 of 3840 columns
+
+Goes from 480 to 960 of 3840 columns
+
+Goes from 0 to 480 of 3840 columns
+
+Goes from 1440 to 1920 of 3840 columns
+
+Goes from 2400 to 2880 of 3840 columns
+
+Goes from 1920 to 2400 of 3840 columns
+
+Goes from 3360 to 3840 of 3840 columns
+
+Goes from 960 to 1440 of 3840 columns
+
+Wer ist hier? 1440 - 1920
+
+Wer ist hier? 2880 - 3360
+
+Wer ist hier? 480 - 960
+
+Wer ist hier? 1920 - 2400
+
+Wer ist hier? 960 - 1440
+
+Wer ist hier? 3360 - 3840
+
+Wer ist hier? 2400 - 2880
+
+Wer ist hier? 0 - 480
+
+Receiving from process 1. width_slice : 480
+Complete 1
+Sended 3840 from process 480 960 
+Receiving from process 2. width_slice : 480
+Sended 3840 from process 960 1440 
+Complete 2
+Receiving from process 3. width_slice : 480
+Complete 3
+Sended 3840 from process 1440 1920 
+Receiving from process 4. width_slice : 480
+Sended 3840 from process 1920 2400 
+Complete 4
+Receiving from process 5. width_slice : 480
+Sended 3840 from process 2400 2880 
+Complete 5
+Receiving from process 6. width_slice : 480
+Sended 3840 from process 2880 3360 
+Complete 6
+Receiving from process 7. width_slice : 480
+Sended 3840 from process 3360 3840 
+Complete 7
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 8 
+
+
+              Process 6 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 3 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 1 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 12 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 4 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 10 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 11 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 13 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 15 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 5 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 14 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 7 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 8 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 9 of 16 started on nicolas-GE60-2QD. n = 3840
+16/16 invoked
+Goes from 2640 to 2880 of 3840 columns
+
+Goes from 2880 to 3120 of 3840 columns
+
+Goes from 960 to 1200 of 3840 columns
+
+Goes from 1920 to 2160 of 3840 columns
+
+Goes from 1680 to 1920 of 3840 columns
+
+Goes from 240 to 480 of 3840 columns
+
+Goes from 1200 to 1440 of 3840 columns
+
+Goes from 0 to 240 of 3840 columns
+
+Goes from 1440 to 1680 of 3840 columns
+
+Goes from 3120 to 3360 of 3840 columns
+
+Goes from 480 to 720 of 3840 columns
+
+Goes from 720 to 960 of 3840 columns
+
+Goes from 3600 to 3840 of 3840 columns
+
+Goes from 2160 to 2400 of 3840 columns
+
+Goes from 2400 to 2640 of 3840 columns
+
+Goes from 3360 to 3600 of 3840 columns
+
+Wer ist hier? 1920 - 2160
+
+Wer ist hier? 960 - 1200
+
+Wer ist hier? 720 - 960
+
+Wer ist hier? 1440 - 1680
+
+Wer ist hier? 2640 - 2880
+
+Wer ist hier? 2400 - 2640
+
+Wer ist hier? 1200 - 1440
+
+Wer ist hier? 1680 - 1920
+
+Wer ist hier? 240 - 480
+
+Wer ist hier? 3120 - 3360
+
+Wer ist hier? 3600 - 3840
+
+Wer ist hier? 480 - 720
+
+Wer ist hier? 3360 - 3600
+
+Wer ist hier? 2880 - 3120
+
+Wer ist hier? 2160 - 2400
+
+Wer ist hier? 0 - 240
+
+Receiving from process 1. width_slice : 240
+Complete 1
+Sended 3840 from process 240 480 
+Receiving from process 2. width_slice : 240
+Complete 2
+Sended 3840 from process 480 720 
+Receiving from process 3. width_slice : 240
+Sended 3840 from process 720 960 
+Complete 3
+Receiving from process 4. width_slice : 240
+Sended 3840 from process 960 1200 
+Complete 4
+Receiving from process 5. width_slice : 240
+Complete 5
+Sended 3840 from process 1200 1440 
+Receiving from process 6. width_slice : 240
+Sended 3840 from process 1440 1680 
+Complete 6
+Receiving from process 7. width_slice : 240
+Sended 3840 from process 1680 1920 
+Complete 7
+Receiving from process 8. width_slice : 240
+Complete 8
+Sended 3840 from process 1920 2160 
+Receiving from process 9. width_slice : 240
+Complete 9
+Sended 3840 from process 2160 2400 
+Receiving from process 10. width_slice : 240
+Sended 3840 from process 2400 2640 
+Complete 10
+Receiving from process 11. width_slice : 240
+Complete 11
+Sended 3840 from process 2640 2880 
+Receiving from process 12. width_slice : 240
+Complete 12
+Sended 3840 from process 2880 3120 
+Receiving from process 13. width_slice : 240
+Complete 13
+Sended 3840 from process 3120 3360 
+Receiving from process 14. width_slice : 240
+Sended 3840 from process 3360 3600 
+Complete 14
+Receiving from process 15. width_slice : 240
+Complete 15
+Sended 3840 from process 3600 3840 
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 8 
+
+
+                              Process 1 of 2 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 2 started on nicolas-GE60-2QD. n = 3840
+2/2 invoked
+Goes from 1920 to 3840 of 3840 columns
+
+Goes from 0 to 1920 of 3840 columns
+
+Wer ist hier? 0 - 1920
+
+Receiving from process 1. width_slice : 1920
+Wer ist hier? 1920 - 3840
+
+Complete 1
+Sended 3840 from process 1920 3840 
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 15 
+
+
+  Process 1 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 3 of 4 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 4 started on nicolas-GE60-2QD. n = 3840
+4/4 invoked
+Goes from 0 to 960 of 3840 columns
+
+Goes from 960 to 1920 of 3840 columns
+
+Goes from 1920 to 2880 of 3840 columns
+
+Goes from 2880 to 3840 of 3840 columns
+
+Wer ist hier? 0 - 960
+
+Wer ist hier? 1920 - 2880
+
+Receiving from process 1. width_slice : 960
+Wer ist hier? 2880 - 3840
+
+Wer ist hier? 960 - 1920
+
+Complete 1
+Sended 3840 from process 960 1920 
+Receiving from process 2. width_slice : 960
+Sended 3840 from process 1920 2880 
+Complete 2
+Receiving from process 3. width_slice : 960
+Sended 3840 from process 2880 3840 
+Complete 3
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 15 
+
+
+      Process 0 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 1 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 3 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 5 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 6 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 7 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 8 started on nicolas-GE60-2QD. n = 3840
+Process 4 of 8 started on nicolas-GE60-2QD. n = 3840
+8/8 invoked
+Goes from 480 to 960 of 3840 columns
+
+Goes from 2880 to 3360 of 3840 columns
+
+Goes from 0 to 480 of 3840 columns
+
+Goes from 2400 to 2880 of 3840 columns
+
+Goes from 1920 to 2400 of 3840 columns
+
+Goes from 3360 to 3840 of 3840 columns
+
+Goes from 1440 to 1920 of 3840 columns
+
+Goes from 960 to 1440 of 3840 columns
+
+Wer ist hier? 0 - 480
+
+Wer ist hier? 3360 - 3840
+
+Receiving from process 1. width_slice : 480
+Wer ist hier? 1920 - 2400
+
+Wer ist hier? 480 - 960
+
+Wer ist hier? 960 - 1440
+
+Sended 3840 from process 480 960 
+Complete 1
+Receiving from process 2. width_slice : 480
+Sended 3840 from process 960 1440 
+Complete 2
+Wer ist hier? 2880 - 3360
+
+Receiving from process 3. width_slice : 480
+Wer ist hier? 1440 - 1920
+
+Complete 3
+Sended 3840 from process 1440 1920 
+Receiving from process 4. width_slice : 480
+Sended 3840 from process 1920 2400 
+Complete 4
+Receiving from process 5. width_slice : 480
+Wer ist hier? 2400 - 2880
+
+Sended 3840 from process 2400 2880 
+Complete 5
+Receiving from process 6. width_slice : 480
+Complete 6
+Sended 3840 from process 2880 3360 
+Receiving from process 7. width_slice : 480
+Complete 7
+Sended 3840 from process 3360 3840 
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 15 
+
+
+              Process 12 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 15 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 8 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 9 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 10 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 11 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 13 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 14 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 0 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 2 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 3 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 4 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 5 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 6 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 7 of 16 started on nicolas-GE60-2QD. n = 3840
+Process 1 of 16 started on nicolas-GE60-2QD. n = 3840
+16/16 invoked
+Goes from 480 to 720 of 3840 columns
+
+Goes from 720 to 960 of 3840 columns
+
+Goes from 1920 to 2160 of 3840 columns
+
+Goes from 1440 to 1680 of 3840 columns
+
+Goes from 2880 to 3120 of 3840 columns
+
+Goes from 3360 to 3600 of 3840 columns
+
+Goes from 240 to 480 of 3840 columns
+
+Goes from 2400 to 2640 of 3840 columns
+
+Goes from 0 to 240 of 3840 columns
+
+Goes from 2160 to 2400 of 3840 columns
+
+Goes from 2640 to 2880 of 3840 columns
+
+Goes from 960 to 1200 of 3840 columns
+
+Goes from 1200 to 1440 of 3840 columns
+
+Goes from 3600 to 3840 of 3840 columns
+
+Goes from 3120 to 3360 of 3840 columns
+
+Goes from 1680 to 1920 of 3840 columns
+
+Wer ist hier? 480 - 720
+
+Wer ist hier? 720 - 960
+
+Wer ist hier? 1920 - 2160
+
+Wer ist hier? 1440 - 1680
+
+Wer ist hier? 2880 - 3120
+
+Wer ist hier? 240 - 480
+
+Wer ist hier? 3120 - 3360
+
+Wer ist hier? 1200 - 1440
+
+Wer ist hier? 2160 - 2400
+
+Wer ist hier? 2400 - 2640
+
+Wer ist hier? 2640 - 2880
+
+Wer ist hier? 3360 - 3600
+
+Wer ist hier? 0 - 240
+
+Receiving from process 1. width_slice : 240
+Complete 1
+Sended 3840 from process 240 480 
+Receiving from process 2. width_slice : 240
+Sended 3840 from process 480 720 
+Complete 2
+Receiving from process 3. width_slice : 240
+Sended 3840 from process 720 960 
+Complete 3
+Receiving from process 4. width_slice : 240
+Wer ist hier? 1680 - 1920
+
+Wer ist hier? 960 - 1200
+
+Sended 3840 from process 960 1200 
+Complete 4
+Sended 3840 from process 1200 1440 
+Receiving from process 5. width_slice : 240
+Complete 5
+Wer ist hier? 3600 - 3840
+
+Receiving from process 6. width_slice : 240
+Complete 6
+Sended 3840 from process 1440 1680 
+Receiving from process 7. width_slice : 240
+Sended 3840 from process 1680 1920 
+Complete 7
+Receiving from process 8. width_slice : 240
+Complete 8
+Sended 3840 from process 1920 2160 
+Receiving from process 9. width_slice : 240
+Sended 3840 from process 2160 2400 
+Complete 9
+Receiving from process 10. width_slice : 240
+Complete 10
+Sended 3840 from process 2400 2640 
+Receiving from process 11. width_slice : 240
+Complete 11
+Sended 3840 from process 2640 2880 
+Receiving from process 12. width_slice : 240
+Complete 12
+Sended 3840 from process 2880 3120 
+Receiving from process 13. width_slice : 240
+Complete 13
+Sended 3840 from process 3120 3360 
+Receiving from process 14. width_slice : 240
+Complete 14
+Sended 3840 from process 3360 3600 
+Receiving from process 15. width_slice : 240
+Sended 3840 from process 3600 3840 
+Complete 15
+Writing final image!
+Rows: 2160 Cols: 3840
+Kernel Size: 15 
+
+
+                              

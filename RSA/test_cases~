@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+clear
+
+
+
+printf "\n\nCracking RSA in a parallelized way \n\n"
+
+./rsa_sec generate 10
+./rsa_sec generate 100
+./rsa_sec generate 1000
+./rsa_sec generate 10000
+./rsa_sec generate 100000
+./rsa_sec generate 1000000
+./rsa_sec generate 10000000
+./rsa_sec generate 100000000
+
+
+printf "End of all RSA tests \n\n"

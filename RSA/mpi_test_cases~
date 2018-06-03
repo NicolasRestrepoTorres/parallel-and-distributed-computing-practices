@@ -1,0 +1,66 @@
+#!/bin/bash
+
+
+clear
+
+
+rm rsa_sec
+g++ rsa_sec.cpp -o rsa_sec -lgmpxx -lgmp
+rm rsa_mpi
+mpic++ rsa_mpi.cpp -o rsa_mpi -lgmpxx -lgmp
+printf "\n\nCracking RSA in a parallelized way with MPI\n\n"
+
+
+
+
+
+counter=1
+for i in {0..10000..1000}
+  do 
+	printf "////////////////////////// Test $counter ////////////////////////\n\n\n\n"
+	counter=$((counter + 1))	
+	echo "Generating key with number: $i"	
+	output=$(./rsa_sec generate $i 0)
+	
+	#echo $output
+
+
+	var1=$(echo $output | cut -d' ' -f1)
+	var2=$(echo $output | cut -d' ' -f2)
+	var3=$(echo $output | cut -d' ' -f3)
+	echo "Generated $var1! Cracking the public keys"
+	#echo $var1
+	#echo $var2
+	#echo $var3
+	printf "\n\n"
+
+
+
+
+	for number_machines in {1..16}
+		do
+		printf " $number_machines machines used:\n\n"
+		start_time="$(date -u +%s.%N)"
+		result=$(mpirun -np $number_machines ./rsa_mpi crack $var1 $var2 0)
+		end_time="$(date -u +%s.%N)"
+
+		elapsed="$(bc <<<"$end_time-$start_time")"
+		echo "$elapsed seconds elapsed for cracking public key $var1 with modulo $var2"
+		#echo $result
+		#echo $var3
+		if [ "$result" == "$var3" ]
+		then
+		   echo "Successfully cracked with result $result"
+		else
+		   echo "Not cracked, the private key was $var3 and the cracked key was $var3?"
+		fi
+		printf "\n"
+	done
+
+	
+ done
+#./rsa_omp generate 100
+
+
+
+printf "End of all RSA tests \n\n"

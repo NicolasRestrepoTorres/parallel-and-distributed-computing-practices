@@ -40,7 +40,7 @@ void set_k(mpz_t k, mpz_t phi)
   mpz_set_str(n, "1000000", 10);
   gmp_randstate_t state;
   gmp_randinit_default (state);
-  gmp_randseed_ui(state, seed);
+  //gmp_randseed_ui(state, seed);
   mpz_urandomm (k, state, n);
 
   for(k; mpz_cmp(k, phi) <= 0; mpz_add_ui(k, k, 1)) {
@@ -53,6 +53,7 @@ void set_d(mpz_t d, mpz_t phi, mpz_t k)
 {
   mpz_t i;
   mpz_init(i);
+
 
   for(; mpz_cmp(i, phi) <= 0; mpz_add_ui(i, i, 1)) {
     mpz_t j;
@@ -97,45 +98,58 @@ int main(int argc, char *argv[10])
   string gen("generate");
   string crack("crack");
 
+  int print;
   if (!argv[1]) {
     cout << "no action: crack <public>, decrypt <public>, encrypt <private>, generate" << endl;
     return 0;
   }
 
   if (argv[1] == gen){
+
+    if (!argv[3]) {
+      cout << "Se necesita especificar en el último argumento el nivel de impresión. (0/1)" << endl;
+      return 0;
+    }
+    print =  atoi(argv[3]);
     mpz_t p;
     mpz_init(p);
     mpz_set_str(p, argv[2], 10);
     mpz_nextprime(p, p);
-    cout << "P: " << p << endl;
+    if(print == 1)cout << "P: " << p << endl;
 
     mpz_t q;
     mpz_init(q);
     mpz_nextprime(q, p);
-    cout << "Q: " << q << endl << endl;
+    if(print == 1)cout << "Q: " << q << endl << endl;
 
     mpz_t m;
     mpz_init(m);
     set_m(m, p, q);
-    cout << "m: " << m << endl;
+    if(print == 1)cout << "m: " << m << endl;
 
     mpz_t phi;
     mpz_init(phi);
     set_phi(phi, p, q);
-    cout << "Ø(m): " << phi << endl << endl;
+    if(print == 1)cout << "Ø(m): " << phi << endl << endl;
 
     mpz_t k;
     mpz_init(k);
     set_k(k, phi);
-    cout << "Offentlig nøgle: " << k << " " << m << endl;
-
+    if(print == 1)cout << "Llave pública: " << k << " " << m << endl;
+    else cout  << k << " " << m << " ";
     mpz_t d;
     mpz_init(d);
     set_d(d, phi, k);
-    cout << "Privat nøgle: " << d << " " << m << endl;
-
+    if(print == 1) cout << "Llave privada: " << d << " " << m << endl;
+    else cout << d << endl;
   } else if (argv[1] == crack) {
-    cout << endl << "Cracking d.." << endl;
+
+    if (!argv[4]) {
+      cout << "Se necesita especificar en el último argumento el nivel de impresión. (0/1)" << endl;
+      return 0;
+    }
+    print =  atoi(argv[4]);
+    if(print == 1)cout << endl << "Cracking d.." << endl;
 
     mpz_t k;
     mpz_init_set_str(k, argv[2], 10);
@@ -152,7 +166,8 @@ int main(int argc, char *argv[10])
     crack_phi(cracked_phi, m);
     set_d(d, cracked_phi, k);
 
-    cout << d << endl;
+    if(print == 1)cout << "Result: " << d << endl;
+    else cout << d << endl;
   }
 
   return 0;

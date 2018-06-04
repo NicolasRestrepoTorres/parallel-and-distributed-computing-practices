@@ -9,11 +9,11 @@
 #include<vector>
 #include<string>
 #include<cstdio>
-#include <omp.h>
+#include <stdio.h>
 
 using namespace std;
 
-__global__ void gcd_vector(thrust::device_vector<int>& d_out){
+__global__ void gcd_vector(int * d_out){
   int idx = threadIdx.x;
   int u = idx, v = blockDim.x;
   while ( v != 0) {
@@ -118,20 +118,26 @@ void crack_phi(mpz_t cracked_phi, mpz_t m)
   mpz_t gcd;
   mpz_init(gcd);
 
-  int x;
+  int sum;
   int integer_m = mpz_get_si (m);
 
-  thrust::device_vector<int> d_out(integer_m);
-  thrust::host_vector<int> h_out(integer_m);
+  int h_out[integer_m];
+  int * d_out;
+
+  cudaMalloc((void **) &d_out, integer_m*sizeof(int));
+
 
   //launch the kernel
   gcd_vector<<<1,integer_m>>>(d_out);
 
   // transfer data back to host
-  //thrust::copy(d_out.begin(), d_out.end(), h_out.begin());
-  
-  int sum = thrust::reduce(d_out.begin(), d_out.end());
+  cudaMemcpy(h_out, d_out, integer_m*sizeof(int), cudaMemcpyDeviceToHost);
+
+  for(int i=0; i<integer_m; i++){
+    sum += h_out[i];
+  }
   mpz_set_si(cracked_phi, sum);
+
 }
 
 int main(int argc, char *argv[10])
@@ -201,15 +207,12 @@ int print;
     }
     print =  atoi(argv[5]);
 
-    int nProcessors = omp_get_max_threads();
+    int nProcessors = 8; //TODO
     int threads =  atoi(argv[4]);
 
 
-    omp_set_num_threads(nProcessors);
+
     if(print == 1)cout << "Hilos a lanzar: " << threads << endl;
-    omp_set_num_threads(threads);
-
-
 
 
     if(print == 1)cout << endl << "Rompiendo la llave privada..." << endl;

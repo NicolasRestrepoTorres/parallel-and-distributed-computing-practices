@@ -12,17 +12,20 @@
 #include <stdio.h>
 
 using namespace std;
+int threads;
 
-__global__ void gcd_vector(int * d_out){
+__global__ void gcd_vector(int * d_out, int integer_m){
   int idx = threadIdx.x;
-  int u = idx, v = blockDim.x;
-  while ( v != 0) {
-    int r = u % v;
-    u = v;
-    v = r;
-  }
-  if(u == 1){
-    d_out[idx]=1;
+  for(int i = idx; i<integer_m; i+=blockDim.x){
+    int u = i, v = integer_m;
+    while ( v != 0) {
+      int r = u % v;
+      u = v;
+      v = r;
+    }
+    if(u == 1){
+      d_out[idx]++;
+    }
   }
 }
 
@@ -121,19 +124,19 @@ void crack_phi(mpz_t cracked_phi, mpz_t m)
   int sum;
   int integer_m = mpz_get_si (m);
 
-  int h_out[integer_m];
+  int h_out[threads];
   int * d_out;
 
-  cudaMalloc((void **) &d_out, integer_m*sizeof(int));
+  cudaMalloc((void **) &d_out, threads*sizeof(int));
 
 
   //launch the kernel
-  gcd_vector<<<1,integer_m>>>(d_out);
+  gcd_vector<<<1,threads>>>(d_out, integer_m);
 
   // transfer data back to host
-  cudaMemcpy(h_out, d_out, integer_m*sizeof(int), cudaMemcpyDeviceToHost);
+  cudaMemcpy(h_out, d_out, threads*sizeof(int), cudaMemcpyDeviceToHost);
 
-  for(int i=0; i<integer_m; i++){
+  for(int i=0; i<threads; i++){
     sum += h_out[i];
   }
   mpz_set_si(cracked_phi, sum);
@@ -208,7 +211,7 @@ int print;
     print =  atoi(argv[5]);
 
     int nProcessors = 8; //TODO
-    int threads =  atoi(argv[4]);
+    threads =  atoi(argv[4]);
 
 
 
